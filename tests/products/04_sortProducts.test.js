@@ -1,4 +1,4 @@
-import { requestProducts } from '../config/api.js'; // не забудь расширение .js, если ESM
+import { requestProducts } from '../config/api.js'; 
 
 describe('Sort products', function () {
 	let resAsc;
