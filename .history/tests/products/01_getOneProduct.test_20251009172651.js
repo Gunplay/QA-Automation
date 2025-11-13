@@ -1,0 +1,23 @@
+import { expect } from 'chai';
+import { requestProducts } from '../config/api.js';
+
+describe('Product', function () {
+	let resProduct;
+
+	it('Get One Product -> 200', async function () {
+		resProduct = await requestProducts
+			.get('/1')
+			.set('Accept', 'application/json');
+		console.log('Status:', resProduct.status);
+		console.log('Body:', JSON.stringify(resProduct.body, null, 2));
+
+		it('Include properly values', async function () {
+			expect(resProduct.body).to.include({
+				id: 1,
+				title: 'Essence Mascara Lash Princess',
+				price: 9.99,
+				discountPercentage: 10.48,
+			});
+		});
+	});
+});

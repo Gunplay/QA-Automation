@@ -1,0 +1,5 @@
+require: '@babel/register'
+--require esm
+--recursive
+--reporter mochawesome
+--reporter-options reportDir=reports,reportFilename=UsersAPI,overwrite=true,html=true,json=false

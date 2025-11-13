@@ -1,0 +1,12 @@
+require:
+  - '@babel/register'
+  - esm
+  - dotenv/config
+recursive: true
+reporter: mochawesome
+reporter-options:
+  reportDir: reports
+  reportFilename: UsersAPI
+  overwrite: true
+  html: true
+  json: false
