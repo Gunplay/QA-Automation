@@ -1,0 +1,23 @@
+# node_modules
+node_modules/
+
+# середовище
+.env
+
+# тимчасові файли
+*.log
+*.tmp
+
+# IDE
+.vscode/
+.idea/
+
+# білд
+dist/
+build/
+
+# системні файли
+.DS_Store
+Thumbs.db
+
+describe
