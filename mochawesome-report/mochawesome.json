@@ -1,15 +1,15 @@
 {
   "stats": {
-    "suites": 11,
-    "tests": 32,
-    "passes": 23,
+    "suites": 12,
+    "tests": 35,
+    "passes": 26,
     "pending": 0,
     "failures": 9,
-    "start": "2025-11-11T16:58:26.780Z",
-    "end": "2025-11-11T16:58:30.449Z",
-    "duration": 3669,
-    "testsRegistered": 32,
-    "passPercent": 71.875,
+    "start": "2025-11-14T16:51:21.823Z",
+    "end": "2025-11-14T16:51:28.609Z",
+    "duration": 6786,
+    "testsRegistered": 35,
+    "passPercent": 74.28571428571429,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "711d5ad9-6c09-4e2b-96c5-d69cee17182b",
+      "uuid": "7e4a44d0-df85-4835-815b-968ba874c5fa",
       "title": "",
       "fullFile": "",
       "file": "",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "f17c89ba-f8d7-44d7-bfab-fb4c2559bd80",
+          "uuid": "f27acc17-5114-46df-8c73-a30568a9951e",
           "title": "LOGIN User",
           "fullFile": "D:\\Develop\\super-api-tests\\tests\\loginUser\\01_loginUser.test.js",
           "file": "\\tests\\loginUser\\01_loginUser.test.js",
@@ -36,7 +36,7 @@
               "title": "\"before all\" hook in \"LOGIN User\"",
               "fullTitle": "LOGIN User \"before all\" hook in \"LOGIN User\"",
               "timedOut": false,
-              "duration": 340,
+              "duration": 420,
               "state": null,
               "speed": null,
               "pass": false,
@@ -45,8 +45,8 @@
               "context": null,
               "code": "var t = this, e = arguments; return new Promise(function (r, o) { var a = n.apply(t, e); function _next(n) { asyncGeneratorStep(a, r, o, _next, _throw, \"next\", n); } function _throw(n) { asyncGeneratorStep(a, r, o, _next, _throw, \"throw\", n); } _next(void 0); });",
               "err": {},
-              "uuid": "657e6dd5-e8af-46b5-b718-6c63b7c1f6cc",
-              "parentUUID": "f17c89ba-f8d7-44d7-bfab-fb4c2559bd80",
+              "uuid": "25bacb42-d1fe-49b4-a9d2-d0a5853a0136",
+              "parentUUID": "f27acc17-5114-46df-8c73-a30568a9951e",
               "isHook": true,
               "skipped": false
             }
@@ -57,7 +57,7 @@
               "title": "1.1 → login user -> status must be 200",
               "fullTitle": "LOGIN User 1.1 → login user -> status must be 200",
               "timedOut": false,
-              "duration": 0,
+              "duration": 1,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -66,8 +66,8 @@
               "context": null,
               "code": "(0, _chai.expect)(res.status).to.equal(200);",
               "err": {},
-              "uuid": "856983ff-425c-42bf-a5f1-8654924faa5b",
-              "parentUUID": "f17c89ba-f8d7-44d7-bfab-fb4c2559bd80",
+              "uuid": "bb95375d-3340-4a3e-bd71-18e9338a6487",
+              "parentUUID": "f27acc17-5114-46df-8c73-a30568a9951e",
               "isHook": false,
               "skipped": false
             },
@@ -75,7 +75,7 @@
               "title": "1.2 → Response must include username and tokens",
               "fullTitle": "LOGIN User 1.2 → Response must include username and tokens",
               "timedOut": false,
-              "duration": 1,
+              "duration": 2,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -84,27 +84,27 @@
               "context": null,
               "code": "(0, _chai.expect)(res.body).to.include({\n  username: 'emilys',\n  email: 'emily.johnson@x.dummyjson.com',\n  firstName: 'Emily',\n  lastName: 'Johnson',\n  gender: 'female'\n});\n(0, _chai.expect)(res.body).to.have.property('accessToken').that.is.a('string');\n(0, _chai.expect)(res.body).to.have.property('refreshToken').that.is.a('string');",
               "err": {},
-              "uuid": "1fa71f7e-aa31-464b-8b1e-fbea22b04bfe",
-              "parentUUID": "f17c89ba-f8d7-44d7-bfab-fb4c2559bd80",
+              "uuid": "c88049b3-7ae6-41ba-ace4-fefdabff87e4",
+              "parentUUID": "f27acc17-5114-46df-8c73-a30568a9951e",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "856983ff-425c-42bf-a5f1-8654924faa5b",
-            "1fa71f7e-aa31-464b-8b1e-fbea22b04bfe"
+            "bb95375d-3340-4a3e-bd71-18e9338a6487",
+            "c88049b3-7ae6-41ba-ace4-fefdabff87e4"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 1,
+          "duration": 3,
           "root": false,
           "rootEmpty": false,
           "_timeout": 10000
         },
         {
-          "uuid": "d22592e9-4642-42ed-8d9c-860591ed482e",
+          "uuid": "89a976d3-53ac-4ce3-aeba-62e02c2a6bfc",
           "title": "Current user",
           "fullFile": "D:\\Develop\\super-api-tests\\tests\\loginUser\\02_GetCurrentUser.test.js",
           "file": "\\tests\\loginUser\\02_GetCurrentUser.test.js",
@@ -115,7 +115,7 @@
               "title": "1.3 → Must be logged user with OWN JWT",
               "fullTitle": "Current user 1.3 → Must be logged user with OWN JWT",
               "timedOut": false,
-              "duration": 224,
+              "duration": 247,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -128,8 +128,8 @@
                 "estack": "AssertionError: expected 401 to equal 200\n    at call (tests\\loginUser\\/02_GetCurrentUser.test.js:16:25)\n    at Generator._invoke (tests\\loginUser\\/02_GetCurrentUser.test.js:2:1)\n    at Generator.next (tests\\loginUser\\/02_GetCurrentUser.test.js:2:1)\n    at asyncGeneratorStep (tests\\loginUser\\/02_GetCurrentUser.test.js:2:1)\n    at _next (tests\\loginUser\\/02_GetCurrentUser.test.js:2:1)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)",
                 "diff": "- 401\n+ 200\n"
               },
-              "uuid": "d6606598-7b47-49f3-9e5a-4604d99461b7",
-              "parentUUID": "d22592e9-4642-42ed-8d9c-860591ed482e",
+              "uuid": "deee73fd-006c-4a8d-91d9-67313f47f395",
+              "parentUUID": "89a976d3-53ac-4ce3-aeba-62e02c2a6bfc",
               "isHook": false,
               "skipped": false
             }
@@ -137,17 +137,17 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "d6606598-7b47-49f3-9e5a-4604d99461b7"
+            "deee73fd-006c-4a8d-91d9-67313f47f395"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 224,
+          "duration": 247,
           "root": false,
           "rootEmpty": false,
           "_timeout": 10000
         },
         {
-          "uuid": "5cc46103-55bc-4eff-ae29-1c8df48b4752",
+          "uuid": "c917fe31-0695-4d9a-acfe-666371b1652f",
           "title": "Delete user",
           "fullFile": "D:\\Develop\\super-api-tests\\tests\\loginUser\\03_deleteUser.test.js",
           "file": "\\tests\\loginUser\\03_deleteUser.test.js",
@@ -158,7 +158,7 @@
               "title": "1.4 → Delete user by id",
               "fullTitle": "Delete user 1.4 → Delete user by id",
               "timedOut": false,
-              "duration": 228,
+              "duration": 252,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -171,8 +171,8 @@
                 "estack": "AssertionError: expected 404 to equal 200\n    at call (tests\\loginUser\\/03_deleteUser.test.js:25:25)\n    at Generator._invoke (tests\\loginUser\\/03_deleteUser.test.js:2:1)\n    at Generator.next (tests\\loginUser\\/03_deleteUser.test.js:2:1)\n    at asyncGeneratorStep (tests\\loginUser\\/03_deleteUser.test.js:2:1)\n    at _next (tests\\loginUser\\/03_deleteUser.test.js:2:1)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)",
                 "diff": "- 404\n+ 200\n"
               },
-              "uuid": "fe700acc-2f0d-4024-ba4e-135a0ab48bce",
-              "parentUUID": "5cc46103-55bc-4eff-ae29-1c8df48b4752",
+              "uuid": "f13ad923-0e5f-43cf-b2ae-f382d324e9fd",
+              "parentUUID": "c917fe31-0695-4d9a-acfe-666371b1652f",
               "isHook": false,
               "skipped": false
             }
@@ -180,17 +180,17 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "fe700acc-2f0d-4024-ba4e-135a0ab48bce"
+            "f13ad923-0e5f-43cf-b2ae-f382d324e9fd"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 228,
+          "duration": 252,
           "root": false,
           "rootEmpty": false,
           "_timeout": 10000
         },
         {
-          "uuid": "eec5a882-8571-44d8-99a5-fb9c1885a600",
+          "uuid": "9669b83d-bff7-4cae-83e5-3445abe0f1ab",
           "title": "Product",
           "fullFile": "D:\\Develop\\super-api-tests\\tests\\products\\01_getOneProduct.test.js",
           "file": "\\tests\\products\\01_getOneProduct.test.js",
@@ -201,7 +201,7 @@
               "title": "1.1 → Get product by ID (status 200)",
               "fullTitle": "Product 1.1 → Get product by ID (status 200)",
               "timedOut": false,
-              "duration": 113,
+              "duration": 90,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -210,8 +210,8 @@
               "context": null,
               "code": "var t = this, e = arguments; return new Promise(function (r, o) { var a = n.apply(t, e); function _next(n) { asyncGeneratorStep(a, r, o, _next, _throw, \"next\", n); } function _throw(n) { asyncGeneratorStep(a, r, o, _next, _throw, \"throw\", n); } _next(void 0); });",
               "err": {},
-              "uuid": "cda3a379-ca35-42e1-96d6-c2328c82ba39",
-              "parentUUID": "eec5a882-8571-44d8-99a5-fb9c1885a600",
+              "uuid": "83dc52a2-7ab3-4bca-a478-b228da2c4d88",
+              "parentUUID": "9669b83d-bff7-4cae-83e5-3445abe0f1ab",
               "isHook": false,
               "skipped": false
             },
@@ -219,7 +219,7 @@
               "title": "1.2 → Response should be an object",
               "fullTitle": "Product 1.2 → Response should be an object",
               "timedOut": false,
-              "duration": 1,
+              "duration": 0,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -228,8 +228,8 @@
               "context": null,
               "code": "(0, _chai.expect)(resProduct.body).to.be.an('object');\nconsole.log('Body type:', _typeof(resProduct.body));",
               "err": {},
-              "uuid": "ba91ae32-ca60-4ed5-a935-b6a661a68f79",
-              "parentUUID": "eec5a882-8571-44d8-99a5-fb9c1885a600",
+              "uuid": "8729f952-1bac-4ee8-aff9-5ef1795f7b32",
+              "parentUUID": "9669b83d-bff7-4cae-83e5-3445abe0f1ab",
               "isHook": false,
               "skipped": false
             },
@@ -246,8 +246,8 @@
               "context": null,
               "code": "(0, _chai.expect)(resProduct.body).to.have.property('id', 1);",
               "err": {},
-              "uuid": "5d655ce7-6cb2-43f5-b9cc-e46540ee5ec8",
-              "parentUUID": "eec5a882-8571-44d8-99a5-fb9c1885a600",
+              "uuid": "b1e4130e-a3ee-4ec5-af09-34d09015239e",
+              "parentUUID": "9669b83d-bff7-4cae-83e5-3445abe0f1ab",
               "isHook": false,
               "skipped": false
             },
@@ -264,29 +264,29 @@
               "context": null,
               "code": "(0, _chai.expect)(resProduct.body).to.have.property('id').that.is.a('number');\n(0, _chai.expect)(resProduct.body).to.have.property('title').that.is.a('string');\n(0, _chai.expect)(resProduct.body).to.have.property('price').that.is.a('number');",
               "err": {},
-              "uuid": "e1d1402e-4567-410e-9573-37fd2bb8edd4",
-              "parentUUID": "eec5a882-8571-44d8-99a5-fb9c1885a600",
+              "uuid": "f5c474b6-769b-42ac-9cd6-7543c6786857",
+              "parentUUID": "9669b83d-bff7-4cae-83e5-3445abe0f1ab",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "cda3a379-ca35-42e1-96d6-c2328c82ba39",
-            "ba91ae32-ca60-4ed5-a935-b6a661a68f79",
-            "5d655ce7-6cb2-43f5-b9cc-e46540ee5ec8",
-            "e1d1402e-4567-410e-9573-37fd2bb8edd4"
+            "83dc52a2-7ab3-4bca-a478-b228da2c4d88",
+            "8729f952-1bac-4ee8-aff9-5ef1795f7b32",
+            "b1e4130e-a3ee-4ec5-af09-34d09015239e",
+            "f5c474b6-769b-42ac-9cd6-7543c6786857"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 114,
+          "duration": 90,
           "root": false,
           "rootEmpty": false,
           "_timeout": 10000
         },
         {
-          "uuid": "c57d0fc2-ddcf-4c5d-a735-d6f0fd084281",
+          "uuid": "68c5fab0-54e9-4ec1-86d7-29e17ad55170",
           "title": "Product Search",
           "fullFile": "D:\\Develop\\super-api-tests\\tests\\products\\02_searchProduct.test.js",
           "file": "\\tests\\products\\02_searchProduct.test.js",
@@ -297,7 +297,7 @@
               "title": "1.1 → Search products by keyword (status 200)",
               "fullTitle": "Product Search 1.1 → Search products by keyword (status 200)",
               "timedOut": false,
-              "duration": 230,
+              "duration": 1176,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -306,8 +306,8 @@
               "context": null,
               "code": "var t = this, e = arguments; return new Promise(function (r, o) { var a = n.apply(t, e); function _next(n) { asyncGeneratorStep(a, r, o, _next, _throw, \"next\", n); } function _throw(n) { asyncGeneratorStep(a, r, o, _next, _throw, \"throw\", n); } _next(void 0); });",
               "err": {},
-              "uuid": "e5f1058c-6d00-4667-9a58-a9e41b8a930d",
-              "parentUUID": "c57d0fc2-ddcf-4c5d-a735-d6f0fd084281",
+              "uuid": "9133ba63-4d60-40ac-853a-b003da828348",
+              "parentUUID": "68c5fab0-54e9-4ec1-86d7-29e17ad55170",
               "isHook": false,
               "skipped": false
             },
@@ -315,7 +315,7 @@
               "title": "1.2 → Response should contain products array",
               "fullTitle": "Product Search 1.2 → Response should contain products array",
               "timedOut": false,
-              "duration": 1,
+              "duration": 0,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -324,8 +324,8 @@
               "context": null,
               "code": "var t = this, e = arguments; return new Promise(function (r, o) { var a = n.apply(t, e); function _next(n) { asyncGeneratorStep(a, r, o, _next, _throw, \"next\", n); } function _throw(n) { asyncGeneratorStep(a, r, o, _next, _throw, \"throw\", n); } _next(void 0); });",
               "err": {},
-              "uuid": "99a35e6b-b1d5-4588-ba2e-3f5f8a64d931",
-              "parentUUID": "c57d0fc2-ddcf-4c5d-a735-d6f0fd084281",
+              "uuid": "c1a09c31-ca95-48c8-af1f-26ce7b06af1d",
+              "parentUUID": "68c5fab0-54e9-4ec1-86d7-29e17ad55170",
               "isHook": false,
               "skipped": false
             },
@@ -342,8 +342,8 @@
               "context": null,
               "code": "//const keyword = 'phone';\nresSearch.body.products.forEach(function (product) {\n  (0, _chai.expect)(product).to.have.property('title');\n  (0, _chai.expect)(product.title).to.be.a('string');\n  (0, _chai.expect)(product.title.length).to.be.above(3);\n});",
               "err": {},
-              "uuid": "0de8ee81-cd2a-45bb-b011-3a9fd5a85a53",
-              "parentUUID": "c57d0fc2-ddcf-4c5d-a735-d6f0fd084281",
+              "uuid": "77689cc0-08eb-4e4e-8cad-09cedde27d54",
+              "parentUUID": "68c5fab0-54e9-4ec1-86d7-29e17ad55170",
               "isHook": false,
               "skipped": false
             },
@@ -360,29 +360,29 @@
               "context": null,
               "code": "(0, _chai.expect)(resSearch.body.products[3].title).to.equal('Beats Flex Wireless Earphones');",
               "err": {},
-              "uuid": "06d538ec-363c-4345-929d-a441d3d2de33",
-              "parentUUID": "c57d0fc2-ddcf-4c5d-a735-d6f0fd084281",
+              "uuid": "e652a49a-ed95-4f38-97d0-397b074a2fdb",
+              "parentUUID": "68c5fab0-54e9-4ec1-86d7-29e17ad55170",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "e5f1058c-6d00-4667-9a58-a9e41b8a930d",
-            "99a35e6b-b1d5-4588-ba2e-3f5f8a64d931",
-            "0de8ee81-cd2a-45bb-b011-3a9fd5a85a53",
-            "06d538ec-363c-4345-929d-a441d3d2de33"
+            "9133ba63-4d60-40ac-853a-b003da828348",
+            "c1a09c31-ca95-48c8-af1f-26ce7b06af1d",
+            "77689cc0-08eb-4e4e-8cad-09cedde27d54",
+            "e652a49a-ed95-4f38-97d0-397b074a2fdb"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 234,
+          "duration": 1179,
           "root": false,
           "rootEmpty": false,
           "_timeout": 10000
         },
         {
-          "uuid": "e1131522-8b25-4a8d-b5df-6c3bdc25c98c",
+          "uuid": "5fda8054-4388-4a7d-8753-26b2cf9d67b8",
           "title": "Sort products",
           "fullFile": "D:\\Develop\\super-api-tests\\tests\\products\\04_sortProducts.test.js",
           "file": "\\tests\\products\\04_sortProducts.test.js",
@@ -393,7 +393,7 @@
               "title": "1.1 → Get products sorted by price ascending (status 200)",
               "fullTitle": "Sort products 1.1 → Get products sorted by price ascending (status 200)",
               "timedOut": false,
-              "duration": 233,
+              "duration": 818,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -402,26 +402,103 @@
               "context": null,
               "code": "var t = this, e = arguments; return new Promise(function (r, o) { var a = n.apply(t, e); function _next(n) { asyncGeneratorStep(a, r, o, _next, _throw, \"next\", n); } function _throw(n) { asyncGeneratorStep(a, r, o, _next, _throw, \"throw\", n); } _next(void 0); });",
               "err": {},
-              "uuid": "99c35f10-d14a-4f31-bbbe-55fa93b2f4f3",
-              "parentUUID": "e1131522-8b25-4a8d-b5df-6c3bdc25c98c",
+              "uuid": "2602faee-1a58-4606-bce4-f46f2be687a1",
+              "parentUUID": "5fda8054-4388-4a7d-8753-26b2cf9d67b8",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "99c35f10-d14a-4f31-bbbe-55fa93b2f4f3"
+            "2602faee-1a58-4606-bce4-f46f2be687a1"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 233,
+          "duration": 818,
           "root": false,
           "rootEmpty": false,
           "_timeout": 10000
         },
         {
-          "uuid": "c077cad7-6cfa-4e3b-9049-7d50e5eb6361",
+          "uuid": "223bf64f-1012-4ff0-971a-bfa5bad92a75",
+          "title": "5 Get all products categories",
+          "fullFile": "D:\\Develop\\super-api-tests\\tests\\products\\05_GetAllProductsСategories.test.js",
+          "file": "\\tests\\products\\05_GetAllProductsСategories.test.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "5.1 should return all product categories with status 200",
+              "fullTitle": "5 Get all products categories 5.1 should return all product categories with status 200",
+              "timedOut": false,
+              "duration": 313,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var t = this, e = arguments; return new Promise(function (r, o) { var a = n.apply(t, e); function _next(n) { asyncGeneratorStep(a, r, o, _next, _throw, \"next\", n); } function _throw(n) { asyncGeneratorStep(a, r, o, _next, _throw, \"throw\", n); } _next(void 0); });",
+              "err": {},
+              "uuid": "c50b5514-41cd-4b8c-90b1-5f677155c5d1",
+              "parentUUID": "223bf64f-1012-4ff0-971a-bfa5bad92a75",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "5.2 result should be an array with length greater than 0",
+              "fullTitle": "5 Get all products categories 5.2 result should be an array with length greater than 0",
+              "timedOut": false,
+              "duration": 266,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var t = this, e = arguments; return new Promise(function (r, o) { var a = n.apply(t, e); function _next(n) { asyncGeneratorStep(a, r, o, _next, _throw, \"next\", n); } function _throw(n) { asyncGeneratorStep(a, r, o, _next, _throw, \"throw\", n); } _next(void 0); });",
+              "err": {},
+              "uuid": "e25757d9-a439-404e-b3e9-3081634aba4b",
+              "parentUUID": "223bf64f-1012-4ff0-971a-bfa5bad92a75",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "5.3 Array must include object with properly structure",
+              "fullTitle": "5 Get all products categories 5.3 Array must include object with properly structure",
+              "timedOut": false,
+              "duration": 213,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var t = this, e = arguments; return new Promise(function (r, o) { var a = n.apply(t, e); function _next(n) { asyncGeneratorStep(a, r, o, _next, _throw, \"next\", n); } function _throw(n) { asyncGeneratorStep(a, r, o, _next, _throw, \"throw\", n); } _next(void 0); });",
+              "err": {},
+              "uuid": "711e4278-0c72-4f4e-988c-d8d2d575828d",
+              "parentUUID": "223bf64f-1012-4ff0-971a-bfa5bad92a75",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "c50b5514-41cd-4b8c-90b1-5f677155c5d1",
+            "e25757d9-a439-404e-b3e9-3081634aba4b",
+            "711e4278-0c72-4f4e-988c-d8d2d575828d"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 792,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 10000
+        },
+        {
+          "uuid": "383843bc-94b4-4f8f-b67b-d66b48feea2c",
           "title": "Users API - Create User",
           "fullFile": "D:\\Develop\\super-api-tests\\tests\\users\\01_createUser.test.js",
           "file": "\\tests\\users\\01_createUser.test.js",
@@ -430,7 +507,7 @@
               "title": "\"before all\" hook in \"Users API - Create User\"",
               "fullTitle": "Users API - Create User \"before all\" hook in \"Users API - Create User\"",
               "timedOut": false,
-              "duration": 226,
+              "duration": 384,
               "state": null,
               "speed": null,
               "pass": false,
@@ -439,8 +516,8 @@
               "context": null,
               "code": "var t = this, e = arguments; return new Promise(function (r, o) { var a = n.apply(t, e); function _next(n) { asyncGeneratorStep(a, r, o, _next, _throw, \"next\", n); } function _throw(n) { asyncGeneratorStep(a, r, o, _next, _throw, \"throw\", n); } _next(void 0); });",
               "err": {},
-              "uuid": "5bf09ae6-5e61-4aaa-aacc-ecdb5e550fd2",
-              "parentUUID": "c077cad7-6cfa-4e3b-9049-7d50e5eb6361",
+              "uuid": "09133808-f3c2-421d-900f-011aa8f829d1",
+              "parentUUID": "383843bc-94b4-4f8f-b67b-d66b48feea2c",
               "isHook": true,
               "skipped": false
             }
@@ -451,7 +528,7 @@
               "title": "1.0 → Object should not be empty",
               "fullTitle": "Users API - Create User 1.0 → Object should not be empty",
               "timedOut": false,
-              "duration": 1,
+              "duration": 0,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -460,8 +537,8 @@
               "context": null,
               "code": "(0, _chai.expect)(res.body).to.not.be.empty;",
               "err": {},
-              "uuid": "ee021ed2-c259-46ab-a324-1eceaee74073",
-              "parentUUID": "c077cad7-6cfa-4e3b-9049-7d50e5eb6361",
+              "uuid": "8b0470d2-6d8e-4ad0-8da5-15bd6f4bbf6d",
+              "parentUUID": "383843bc-94b4-4f8f-b67b-d66b48feea2c",
               "isHook": false,
               "skipped": false
             },
@@ -478,8 +555,8 @@
               "context": null,
               "code": "(0, _chai.expect)(res.status).to.equal(201);",
               "err": {},
-              "uuid": "fadf73ca-7ab3-4dc7-9ce4-096d1644aad0",
-              "parentUUID": "c077cad7-6cfa-4e3b-9049-7d50e5eb6361",
+              "uuid": "fbe36ac3-c6d6-4fa1-bce0-7df51b43208f",
+              "parentUUID": "383843bc-94b4-4f8f-b67b-d66b48feea2c",
               "isHook": false,
               "skipped": false
             },
@@ -487,7 +564,7 @@
               "title": "1.2 → Response body should be an object",
               "fullTitle": "Users API - Create User 1.2 → Response body should be an object",
               "timedOut": false,
-              "duration": 1,
+              "duration": 0,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -496,8 +573,8 @@
               "context": null,
               "code": "(0, _chai.expect)(res.body).to.be.an('object');",
               "err": {},
-              "uuid": "7fba4821-ea28-4dfc-b506-44c29cccd6d2",
-              "parentUUID": "c077cad7-6cfa-4e3b-9049-7d50e5eb6361",
+              "uuid": "d4cfa632-d998-461b-9132-25c061f99182",
+              "parentUUID": "383843bc-94b4-4f8f-b67b-d66b48feea2c",
               "isHook": false,
               "skipped": false
             },
@@ -518,8 +595,8 @@
                 "estack": "AssertionError: expected { id: 209, firstName: 'Adam', …(26) } to have property 'address' of 'Taiwan', but got { address: '', city: '', …(5) }\n    at Context.<anonymous> (tests\\users\\/01_createUser.test.js:38:23)\n    at processImmediate (node:internal/timers:485:21)",
                 "diff": null
               },
-              "uuid": "5c4accb3-18fc-416a-80f8-b0ad5ad4d4ff",
-              "parentUUID": "c077cad7-6cfa-4e3b-9049-7d50e5eb6361",
+              "uuid": "5e0d3a4e-375f-44df-8840-9e3d54753dbc",
+              "parentUUID": "383843bc-94b4-4f8f-b67b-d66b48feea2c",
               "isHook": false,
               "skipped": false
             },
@@ -536,8 +613,8 @@
               "context": null,
               "code": "(0, _chai.expect)(res.body).to.have.property('id');\n(0, _chai.expect)((0, _validators.isPositiveNumber)(res.body.id)).to.be[\"true\"];",
               "err": {},
-              "uuid": "47fe21b8-ce69-4ecb-a3da-6bd66163d5ad",
-              "parentUUID": "c077cad7-6cfa-4e3b-9049-7d50e5eb6361",
+              "uuid": "2dc12315-470c-4647-bdea-3297139381ca",
+              "parentUUID": "383843bc-94b4-4f8f-b67b-d66b48feea2c",
               "isHook": false,
               "skipped": false
             },
@@ -554,8 +631,8 @@
               "context": null,
               "code": "(0, _chai.expect)((0, _validators.isValidEmail)(res.body.email)).to.be[\"true\"];\n(0, _chai.expect)((0, _validators.isGmail)(res.body.email)).to.be[\"true\"];",
               "err": {},
-              "uuid": "484c9ddc-022b-4797-9fc8-b1424c1e3aa2",
-              "parentUUID": "c077cad7-6cfa-4e3b-9049-7d50e5eb6361",
+              "uuid": "b478c2c8-f786-445c-b427-7da39cdada68",
+              "parentUUID": "383843bc-94b4-4f8f-b67b-d66b48feea2c",
               "isHook": false,
               "skipped": false
             },
@@ -563,7 +640,7 @@
               "title": "1.6 → Name and address should be non-empty strings",
               "fullTitle": "Users API - Create User 1.6 → Name and address should be non-empty strings",
               "timedOut": false,
-              "duration": 1,
+              "duration": 0,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -576,33 +653,33 @@
                 "estack": "AssertionError: expected false to be true\n    at Context.<anonymous> (tests\\users\\/01_createUser.test.js:54:51)\n    at processImmediate (node:internal/timers:485:21)",
                 "diff": "- false\n+ true\n"
               },
-              "uuid": "c2b897f1-c530-4289-adb1-c8e8c85dfb96",
-              "parentUUID": "c077cad7-6cfa-4e3b-9049-7d50e5eb6361",
+              "uuid": "c4dc5ac5-abbf-4e97-a07e-25e41c526cf9",
+              "parentUUID": "383843bc-94b4-4f8f-b67b-d66b48feea2c",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "ee021ed2-c259-46ab-a324-1eceaee74073",
-            "fadf73ca-7ab3-4dc7-9ce4-096d1644aad0",
-            "7fba4821-ea28-4dfc-b506-44c29cccd6d2",
-            "47fe21b8-ce69-4ecb-a3da-6bd66163d5ad",
-            "484c9ddc-022b-4797-9fc8-b1424c1e3aa2"
+            "8b0470d2-6d8e-4ad0-8da5-15bd6f4bbf6d",
+            "fbe36ac3-c6d6-4fa1-bce0-7df51b43208f",
+            "d4cfa632-d998-461b-9132-25c061f99182",
+            "2dc12315-470c-4647-bdea-3297139381ca",
+            "b478c2c8-f786-445c-b427-7da39cdada68"
           ],
           "failures": [
-            "5c4accb3-18fc-416a-80f8-b0ad5ad4d4ff",
-            "c2b897f1-c530-4289-adb1-c8e8c85dfb96"
+            "5e0d3a4e-375f-44df-8840-9e3d54753dbc",
+            "c4dc5ac5-abbf-4e97-a07e-25e41c526cf9"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 5,
+          "duration": 2,
           "root": false,
           "rootEmpty": false,
           "_timeout": 10000
         },
         {
-          "uuid": "a6365957-a7c3-43a8-90d5-4b80ffa24199",
+          "uuid": "a07e75e6-f1d6-411e-8247-866d21bd2967",
           "title": "Users API - Update User",
           "fullFile": "D:\\Develop\\super-api-tests\\tests\\users\\03_updateUser.test.js",
           "file": "\\tests\\users\\03_updateUser.test.js",
@@ -611,7 +688,7 @@
               "title": "\"before all\" hook in \"Users API - Update User\"",
               "fullTitle": "Users API - Update User \"before all\" hook in \"Users API - Update User\"",
               "timedOut": false,
-              "duration": 222,
+              "duration": 316,
               "state": null,
               "speed": null,
               "pass": false,
@@ -620,8 +697,8 @@
               "context": null,
               "code": "var t = this, e = arguments; return new Promise(function (r, o) { var a = n.apply(t, e); function _next(n) { asyncGeneratorStep(a, r, o, _next, _throw, \"next\", n); } function _throw(n) { asyncGeneratorStep(a, r, o, _next, _throw, \"throw\", n); } _next(void 0); });",
               "err": {},
-              "uuid": "dcf9e1c6-6449-48d3-bd1b-06130b696ba5",
-              "parentUUID": "a6365957-a7c3-43a8-90d5-4b80ffa24199",
+              "uuid": "32480709-bd28-470b-b618-3c6bab88a023",
+              "parentUUID": "a07e75e6-f1d6-411e-8247-866d21bd2967",
               "isHook": true,
               "skipped": false
             }
@@ -632,7 +709,7 @@
               "title": "3.1 → PUT /users/:id should update name",
               "fullTitle": "Users API - Update User 3.1 → PUT /users/:id should update name",
               "timedOut": false,
-              "duration": 221,
+              "duration": 320,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -645,8 +722,8 @@
                 "estack": "AssertionError: expected 404 to equal 200\n    at call (tests\\users\\/03_updateUser.test.js:26:25)\n    at Generator._invoke (tests\\users\\/03_updateUser.test.js:2:1)\n    at Generator.next (tests\\users\\/03_updateUser.test.js:2:1)\n    at asyncGeneratorStep (tests\\users\\/03_updateUser.test.js:2:1)\n    at _next (tests\\users\\/03_updateUser.test.js:2:1)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)",
                 "diff": "- 404\n+ 200\n"
               },
-              "uuid": "0874a5ee-ead3-4410-a1d9-e69e2ca832a3",
-              "parentUUID": "a6365957-a7c3-43a8-90d5-4b80ffa24199",
+              "uuid": "0e0f5cc4-1e67-4700-ae52-0dd274d21608",
+              "parentUUID": "a07e75e6-f1d6-411e-8247-866d21bd2967",
               "isHook": false,
               "skipped": false
             }
@@ -654,17 +731,17 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "0874a5ee-ead3-4410-a1d9-e69e2ca832a3"
+            "0e0f5cc4-1e67-4700-ae52-0dd274d21608"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 221,
+          "duration": 320,
           "root": false,
           "rootEmpty": false,
           "_timeout": 10000
         },
         {
-          "uuid": "c2c2c088-a774-45f3-b8ef-e7f59a02d639",
+          "uuid": "d91ac4db-25af-472c-b903-fc070682629c",
           "title": "Users API - Delete User",
           "fullFile": "D:\\Develop\\super-api-tests\\tests\\users\\04_deleteUser.test.js",
           "file": "\\tests\\users\\04_deleteUser.test.js",
@@ -673,7 +750,7 @@
               "title": "\"before all\" hook in \"Users API - Delete User\"",
               "fullTitle": "Users API - Delete User \"before all\" hook in \"Users API - Delete User\"",
               "timedOut": false,
-              "duration": 219,
+              "duration": 291,
               "state": null,
               "speed": null,
               "pass": false,
@@ -682,8 +759,8 @@
               "context": null,
               "code": "var t = this, e = arguments; return new Promise(function (r, o) { var a = n.apply(t, e); function _next(n) { asyncGeneratorStep(a, r, o, _next, _throw, \"next\", n); } function _throw(n) { asyncGeneratorStep(a, r, o, _next, _throw, \"throw\", n); } _next(void 0); });",
               "err": {},
-              "uuid": "6a347440-bcb9-4c22-832b-3018ff46d604",
-              "parentUUID": "c2c2c088-a774-45f3-b8ef-e7f59a02d639",
+              "uuid": "6d798bd5-15f3-4e9b-88c2-8cc6aef8f4ec",
+              "parentUUID": "d91ac4db-25af-472c-b903-fc070682629c",
               "isHook": true,
               "skipped": false
             }
@@ -694,7 +771,7 @@
               "title": "4.1 → DELETE /users/:id should delete user",
               "fullTitle": "Users API - Delete User 4.1 → DELETE /users/:id should delete user",
               "timedOut": false,
-              "duration": 223,
+              "duration": 278,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -707,8 +784,8 @@
                 "estack": "AssertionError: expected 404 to equal 200\n    at call (tests\\users\\/04_deleteUser.test.js:23:25)\n    at Generator._invoke (tests\\users\\/04_deleteUser.test.js:2:1)\n    at Generator.next (tests\\users\\/04_deleteUser.test.js:2:1)\n    at asyncGeneratorStep (tests\\users\\/04_deleteUser.test.js:2:1)\n    at _next (tests\\users\\/04_deleteUser.test.js:2:1)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)",
                 "diff": "- 404\n+ 200\n"
               },
-              "uuid": "ff67429e-fbbe-43c9-8404-f60aa4803dd0",
-              "parentUUID": "c2c2c088-a774-45f3-b8ef-e7f59a02d639",
+              "uuid": "e60efe46-f524-4ca9-aa9d-e98df713b620",
+              "parentUUID": "d91ac4db-25af-472c-b903-fc070682629c",
               "isHook": false,
               "skipped": false
             },
@@ -716,7 +793,7 @@
               "title": "4.2 → GET /users/:id should return 404 after delete",
               "fullTitle": "Users API - Delete User 4.2 → GET /users/:id should return 404 after delete",
               "timedOut": false,
-              "duration": 216,
+              "duration": 295,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -725,28 +802,28 @@
               "context": null,
               "code": "var t = this, e = arguments; return new Promise(function (r, o) { var a = n.apply(t, e); function _next(n) { asyncGeneratorStep(a, r, o, _next, _throw, \"next\", n); } function _throw(n) { asyncGeneratorStep(a, r, o, _next, _throw, \"throw\", n); } _next(void 0); });",
               "err": {},
-              "uuid": "e3bcae9a-abaf-4b4e-93c0-242821306e7f",
-              "parentUUID": "c2c2c088-a774-45f3-b8ef-e7f59a02d639",
+              "uuid": "c7f7e3e7-296c-422e-9ad1-68c86acee66e",
+              "parentUUID": "d91ac4db-25af-472c-b903-fc070682629c",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "e3bcae9a-abaf-4b4e-93c0-242821306e7f"
+            "c7f7e3e7-296c-422e-9ad1-68c86acee66e"
           ],
           "failures": [
-            "ff67429e-fbbe-43c9-8404-f60aa4803dd0"
+            "e60efe46-f524-4ca9-aa9d-e98df713b620"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 439,
+          "duration": 573,
           "root": false,
           "rootEmpty": false,
           "_timeout": 10000
         },
         {
-          "uuid": "656fb1d4-2894-46ac-b04a-5ef2390cd79c",
+          "uuid": "007511c0-52fb-4231-b5aa-7e80e6ad1031",
           "title": "Users API - Response Headers",
           "fullFile": "D:\\Develop\\super-api-tests\\tests\\users\\05_headers.test.js",
           "file": "\\tests\\users\\05_headers.test.js",
@@ -755,7 +832,7 @@
               "title": "\"before all\" hook in \"Users API - Response Headers\"",
               "fullTitle": "Users API - Response Headers \"before all\" hook in \"Users API - Response Headers\"",
               "timedOut": false,
-              "duration": 220,
+              "duration": 276,
               "state": null,
               "speed": null,
               "pass": false,
@@ -764,8 +841,8 @@
               "context": null,
               "code": "var t = this, e = arguments; return new Promise(function (r, o) { var a = n.apply(t, e); function _next(n) { asyncGeneratorStep(a, r, o, _next, _throw, \"next\", n); } function _throw(n) { asyncGeneratorStep(a, r, o, _next, _throw, \"throw\", n); } _next(void 0); });",
               "err": {},
-              "uuid": "11ac09a5-1ff8-4482-8b36-4f2f066d1b20",
-              "parentUUID": "656fb1d4-2894-46ac-b04a-5ef2390cd79c",
+              "uuid": "9ab5d5ac-3ea9-40f5-90b2-3fa4ba47df80",
+              "parentUUID": "007511c0-52fb-4231-b5aa-7e80e6ad1031",
               "isHook": true,
               "skipped": false
             }
@@ -776,7 +853,7 @@
               "title": "5.1 → Content-Type must be application/json",
               "fullTitle": "Users API - Response Headers 5.1 → Content-Type must be application/json",
               "timedOut": false,
-              "duration": 1,
+              "duration": 0,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -785,8 +862,8 @@
               "context": null,
               "code": "(0, _chai.expect)(res.headers['content-type']).to.include('application/json');",
               "err": {},
-              "uuid": "bab22647-2744-44ca-a9fd-4dba5b87d1e6",
-              "parentUUID": "656fb1d4-2894-46ac-b04a-5ef2390cd79c",
+              "uuid": "47b7d196-67f4-444a-9840-718a91ad456b",
+              "parentUUID": "007511c0-52fb-4231-b5aa-7e80e6ad1031",
               "isHook": false,
               "skipped": false
             },
@@ -803,8 +880,8 @@
               "context": null,
               "code": "(0, _chai.expect)(res.headers).to.have.property('server');",
               "err": {},
-              "uuid": "188559e1-dd85-436b-9e4c-716844e4cd11",
-              "parentUUID": "656fb1d4-2894-46ac-b04a-5ef2390cd79c",
+              "uuid": "635f9911-4077-4e48-b829-995433d7fb09",
+              "parentUUID": "007511c0-52fb-4231-b5aa-7e80e6ad1031",
               "isHook": false,
               "skipped": false
             },
@@ -821,8 +898,8 @@
               "context": null,
               "code": "(0, _chai.expect)(Number(res.headers['content-length'])).to.be.greaterThan(0);",
               "err": {},
-              "uuid": "19c7b85f-ac11-4f60-b5eb-18d4586ef285",
-              "parentUUID": "656fb1d4-2894-46ac-b04a-5ef2390cd79c",
+              "uuid": "bdc4b7c3-0236-4a2e-8b07-11bbdd3aa26c",
+              "parentUUID": "007511c0-52fb-4231-b5aa-7e80e6ad1031",
               "isHook": false,
               "skipped": false
             },
@@ -839,8 +916,8 @@
               "context": null,
               "code": "var date = new Date(res.headers['date']);\n(0, _chai.expect)(date.toString()).not.to.equal('Invalid Date');",
               "err": {},
-              "uuid": "e9ae6022-67f8-42d0-b127-25723d20f9d5",
-              "parentUUID": "656fb1d4-2894-46ac-b04a-5ef2390cd79c",
+              "uuid": "8c60e901-c64d-4fbf-9365-c00a0897ccd9",
+              "parentUUID": "007511c0-52fb-4231-b5aa-7e80e6ad1031",
               "isHook": false,
               "skipped": false
             },
@@ -848,7 +925,7 @@
               "title": "5.5 → CORS must allow all origins",
               "fullTitle": "Users API - Response Headers 5.5 → CORS must allow all origins",
               "timedOut": false,
-              "duration": 1,
+              "duration": 0,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -857,8 +934,8 @@
               "context": null,
               "code": "(0, _chai.expect)(res.headers['access-control-allow-origin']).to.equal('*');",
               "err": {},
-              "uuid": "808f776a-08e4-4213-8cb6-1240a46c6b34",
-              "parentUUID": "656fb1d4-2894-46ac-b04a-5ef2390cd79c",
+              "uuid": "8c98a55c-3888-4278-8b94-798f495d641f",
+              "parentUUID": "007511c0-52fb-4231-b5aa-7e80e6ad1031",
               "isHook": false,
               "skipped": false
             },
@@ -875,31 +952,31 @@
               "context": null,
               "code": "(0, _chai.expect)(res.headers).to.have.property('x-frame-options');\n(0, _chai.expect)(res.headers).to.have.property('x-content-type-options');\n(0, _chai.expect)(res.headers).to.have.property('x-xss-protection');",
               "err": {},
-              "uuid": "e955ff6e-6f35-4031-bf6d-82dc35305a66",
-              "parentUUID": "656fb1d4-2894-46ac-b04a-5ef2390cd79c",
+              "uuid": "42e675e4-40cb-4769-84ea-1c9f841661de",
+              "parentUUID": "007511c0-52fb-4231-b5aa-7e80e6ad1031",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "bab22647-2744-44ca-a9fd-4dba5b87d1e6",
-            "188559e1-dd85-436b-9e4c-716844e4cd11",
-            "19c7b85f-ac11-4f60-b5eb-18d4586ef285",
-            "e9ae6022-67f8-42d0-b127-25723d20f9d5",
-            "808f776a-08e4-4213-8cb6-1240a46c6b34",
-            "e955ff6e-6f35-4031-bf6d-82dc35305a66"
+            "47b7d196-67f4-444a-9840-718a91ad456b",
+            "635f9911-4077-4e48-b829-995433d7fb09",
+            "bdc4b7c3-0236-4a2e-8b07-11bbdd3aa26c",
+            "8c60e901-c64d-4fbf-9365-c00a0897ccd9",
+            "8c98a55c-3888-4278-8b94-798f495d641f",
+            "42e675e4-40cb-4769-84ea-1c9f841661de"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 2,
+          "duration": 0,
           "root": false,
           "rootEmpty": false,
           "_timeout": 10000
         },
         {
-          "uuid": "d41efbd0-4896-4f9b-a1cb-8f43f9f1dedb",
+          "uuid": "85e9b4b7-26cf-46ea-8946-04da1ec2c281",
           "title": "Users API - Negative Tests",
           "fullFile": "D:\\Develop\\super-api-tests\\tests\\users\\06_negative.test.js",
           "file": "\\tests\\users\\06_negative.test.js",
@@ -910,7 +987,7 @@
               "title": "6.1 → Should fail creating user with invalid email",
               "fullTitle": "Users API - Negative Tests 6.1 → Should fail creating user with invalid email",
               "timedOut": false,
-              "duration": 253,
+              "duration": 265,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -923,8 +1000,8 @@
                 "estack": "AssertionError: expected 201 to be one of [ 400, 422 ]\n    at call (tests\\users\\/06_negative.test.js:19:28)\n    at Generator._invoke (tests\\users\\/06_negative.test.js:2:1)\n    at Generator.next (tests\\users\\/06_negative.test.js:2:1)\n    at asyncGeneratorStep (tests\\users\\/06_negative.test.js:2:1)\n    at _next (tests\\users\\/06_negative.test.js:2:1)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)",
                 "diff": null
               },
-              "uuid": "f64ec4c8-3525-4afd-b06a-f1d20055126d",
-              "parentUUID": "d41efbd0-4896-4f9b-a1cb-8f43f9f1dedb",
+              "uuid": "fc09332f-f337-4572-abfd-89cbdc37196f",
+              "parentUUID": "85e9b4b7-26cf-46ea-8946-04da1ec2c281",
               "isHook": false,
               "skipped": false
             },
@@ -932,7 +1009,7 @@
               "title": "6.2 → Should fail creating user with negative age",
               "fullTitle": "Users API - Negative Tests 6.2 → Should fail creating user with negative age",
               "timedOut": false,
-              "duration": 230,
+              "duration": 281,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -945,8 +1022,8 @@
                 "estack": "AssertionError: expected 201 to be one of [ 400, 422 ]\n    at call (tests\\users\\/06_negative.test.js:35:28)\n    at Generator._invoke (tests\\users\\/06_negative.test.js:2:1)\n    at Generator.next (tests\\users\\/06_negative.test.js:2:1)\n    at asyncGeneratorStep (tests\\users\\/06_negative.test.js:2:1)\n    at _next (tests\\users\\/06_negative.test.js:2:1)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)",
                 "diff": null
               },
-              "uuid": "55fd59fe-216d-4d11-a0f1-42d25a9117fa",
-              "parentUUID": "d41efbd0-4896-4f9b-a1cb-8f43f9f1dedb",
+              "uuid": "5b0187a0-9398-41ce-966b-e80adbbd02fa",
+              "parentUUID": "85e9b4b7-26cf-46ea-8946-04da1ec2c281",
               "isHook": false,
               "skipped": false
             },
@@ -954,7 +1031,7 @@
               "title": "6.3 → Should fail creating user with empty fields",
               "fullTitle": "Users API - Negative Tests 6.3 → Should fail creating user with empty fields",
               "timedOut": false,
-              "duration": 224,
+              "duration": 244,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -967,8 +1044,8 @@
                 "estack": "AssertionError: expected 201 to be one of [ 400, 422 ]\n    at call (tests\\users\\/06_negative.test.js:44:28)\n    at Generator._invoke (tests\\users\\/06_negative.test.js:2:1)\n    at Generator.next (tests\\users\\/06_negative.test.js:2:1)\n    at asyncGeneratorStep (tests\\users\\/06_negative.test.js:2:1)\n    at _next (tests\\users\\/06_negative.test.js:2:1)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)",
                 "diff": null
               },
-              "uuid": "881b5efe-1c45-46d4-a4bf-13260dfb67e0",
-              "parentUUID": "d41efbd0-4896-4f9b-a1cb-8f43f9f1dedb",
+              "uuid": "b578c597-3e26-44c7-913d-de3eaf9f49bf",
+              "parentUUID": "85e9b4b7-26cf-46ea-8946-04da1ec2c281",
               "isHook": false,
               "skipped": false
             }
@@ -976,13 +1053,13 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "f64ec4c8-3525-4afd-b06a-f1d20055126d",
-            "55fd59fe-216d-4d11-a0f1-42d25a9117fa",
-            "881b5efe-1c45-46d4-a4bf-13260dfb67e0"
+            "fc09332f-f337-4572-abfd-89cbdc37196f",
+            "5b0187a0-9398-41ce-966b-e80adbbd02fa",
+            "b578c597-3e26-44c7-913d-de3eaf9f49bf"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 707,
+          "duration": 790,
           "root": false,
           "rootEmpty": false,
           "_timeout": 10000

@@ -1,4 +1,4 @@
-import { requestProducts } from '../config/api.js'; 
+import { requestProducts } from '../config/api.js'
 
 describe('Sort products', function () {
 	let resAsc;
