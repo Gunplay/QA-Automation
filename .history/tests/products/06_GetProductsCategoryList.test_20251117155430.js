@@ -5,12 +5,11 @@ import { requestProducts } from '../config/api.js';
 describe('6 Get products by category', () => {
 	let data;
 	it('6.1 should return list of categories with status 200', async () => {
-		// const response = await requestProducts.get('/categories'); it should be like this
-		const response = await requestProducts(
+		const response = await fetch(
 			'https://dummyjson.com/products/category-list'
 		);
 		expect(response.status).tо.equal(200);
-		const data = await response.json(); // two variables with the same name
+		data = await response.json(); // first ERROR bind with variable "const", if you watch to upper code you will see that variable "data" is declared without "const"
 	});
 	it('6.2 should return categories as an array with length greater than 0', async () => {
 		expect(data).to.be.an('array');
