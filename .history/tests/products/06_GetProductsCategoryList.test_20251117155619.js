@@ -5,8 +5,7 @@ import { requestProducts } from '../config/api.js';
 describe('6 Get products by category', () => {
 	let data;
 	it('6.1 should return list of categories with status 200', async () => {
-		// const response = await requestProducts.get('/categories'); it should be like this
-		const response = await requestProducts(
+		const response = await fetch(
 			'https://dummyjson.com/products/category-list'
 		);
 		expect(response.status).tо.equal(200);

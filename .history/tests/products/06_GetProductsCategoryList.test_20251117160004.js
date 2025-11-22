@@ -5,12 +5,16 @@ import { requestProducts } from '../config/api.js';
 describe('6 Get products by category', () => {
 	let data;
 	it('6.1 should return list of categories with status 200', async () => {
-		// const response = await requestProducts.get('/categories'); it should be like this
-		const response = await requestProducts(
-			'https://dummyjson.com/products/category-list'
-		);
-		expect(response.status).tо.equal(200);
-		const data = await response.json(); // two variables with the same name
+		const response = await requestProducts.get('/categories');
+		console.log(response.body);
+		expect(response.status).to.equal(200);
+		data = response.body;
+
+		// (
+		// 	'/category-list'
+		// );
+		// expect(response.status).tо.equal(200);
+		// const data = await response.json(); // two variables with the same name
 	});
 	it('6.2 should return categories as an array with length greater than 0', async () => {
 		expect(data).to.be.an('array');

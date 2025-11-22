@@ -1,0 +1,25 @@
+npm i --save-dev supertest mocha chai @babel/cli @babel/core @babel/node @babel/register @babel/preset-env
+
+Access Tokens
+These are your personal access tokens, do not share then on public websites.
+Label	Token	Expires	Limit	Remaining	Action
+Primary Token	0c5ed807a96f6b009e7642be9b337f2b84f4a401816b9d5434155f937cc4a8a8	Never	90	90
+
+
+git rm -r --cached . - for delete screen history
+
+https://www.chaijs.com/api/assert/
+
+PS D:\Develop\super-api-tests> git checkout
+Your branch is up to date with 'origin/main'.
+PS D:\Develop\super-api-tests> git branch
+* main
+PS D:\Develop\super-api-tests> git branch -r
+origin/main
+origin/my-branch
+PS D:\Develop\super-api-tests> git branch -v
+* main 667a47f added doc for chai
+PS D:\Develop\super-api-tests> git branch -av
+* main                     667a47f added doc for chai
+remotes/origin/main      667a47f added doc for chai
+remotes/origin/my-branch 83ed18e 06 get category list

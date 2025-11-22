@@ -5,9 +5,9 @@
     "passes": 27,
     "pending": 0,
     "failures": 12,
-    "start": "2025-11-22T20:02:41.156Z",
-    "end": "2025-11-22T20:02:47.197Z",
-    "duration": 6041,
+    "start": "2025-11-22T20:12:52.497Z",
+    "end": "2025-11-22T20:12:57.745Z",
+    "duration": 5248,
     "testsRegistered": 39,
     "passPercent": 69.23076923076923,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "b2339900-d099-405f-a157-14d5365f255f",
+      "uuid": "b4d7ac7a-1f80-438e-b2d3-61f56e752aa8",
       "title": "",
       "fullFile": "",
       "file": "",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "6f5b2344-df12-4830-8466-87505476eb52",
+          "uuid": "be49688d-a470-4979-b8bb-8efc34534586",
           "title": "LOGIN User",
           "fullFile": "D:\\VSProjects\\autoTest\\QA-Automation\\tests\\loginUser\\01_loginUser.test.js",
           "file": "\\tests\\loginUser\\01_loginUser.test.js",
@@ -36,7 +36,7 @@
               "title": "\"before all\" hook in \"LOGIN User\"",
               "fullTitle": "LOGIN User \"before all\" hook in \"LOGIN User\"",
               "timedOut": false,
-              "duration": 314,
+              "duration": 449,
               "state": null,
               "speed": null,
               "pass": false,
@@ -45,8 +45,8 @@
               "context": null,
               "code": "user = UserOfDummyJson();\nres = await requestUsers\n\t.post('/login')\n\t.set('Accept', 'application/json')\n\t.send(user);\n// console.log('Response:', res.body);",
               "err": {},
-              "uuid": "04b97f88-e670-47d3-bd87-d6530fa76033",
-              "parentUUID": "6f5b2344-df12-4830-8466-87505476eb52",
+              "uuid": "2177dcd8-799c-4bc7-88e1-b1cd7275eb4c",
+              "parentUUID": "be49688d-a470-4979-b8bb-8efc34534586",
               "isHook": true,
               "skipped": false
             }
@@ -66,8 +66,8 @@
               "context": null,
               "code": "expect(res.status).to.equal(200);",
               "err": {},
-              "uuid": "247370d6-9365-4ba6-aa18-501f0687027a",
-              "parentUUID": "6f5b2344-df12-4830-8466-87505476eb52",
+              "uuid": "80faacd7-9d75-4d26-a688-ea11b2c6e8e0",
+              "parentUUID": "be49688d-a470-4979-b8bb-8efc34534586",
               "isHook": false,
               "skipped": false
             },
@@ -75,7 +75,7 @@
               "title": "1.2 → Response must include username and tokens",
               "fullTitle": "LOGIN User 1.2 → Response must include username and tokens",
               "timedOut": false,
-              "duration": 1,
+              "duration": 2,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -84,27 +84,27 @@
               "context": null,
               "code": "expect(res.body).to.include({\n\tusername: 'emilys',\n\temail: 'emily.johnson@x.dummyjson.com',\n\tfirstName: 'Emily',\n\tlastName: 'Johnson',\n\tgender: 'female',\n});\nexpect(res.body).to.have.property('accessToken').that.is.a('string');\nexpect(res.body).to.have.property('refreshToken').that.is.a('string');",
               "err": {},
-              "uuid": "61390f72-a2c6-45dc-b3cb-7e3755404722",
-              "parentUUID": "6f5b2344-df12-4830-8466-87505476eb52",
+              "uuid": "fc1d20d7-1382-42fb-b3a9-e5d900242ac3",
+              "parentUUID": "be49688d-a470-4979-b8bb-8efc34534586",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "247370d6-9365-4ba6-aa18-501f0687027a",
-            "61390f72-a2c6-45dc-b3cb-7e3755404722"
+            "80faacd7-9d75-4d26-a688-ea11b2c6e8e0",
+            "fc1d20d7-1382-42fb-b3a9-e5d900242ac3"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 1,
+          "duration": 2,
           "root": false,
           "rootEmpty": false,
           "_timeout": 10000
         },
         {
-          "uuid": "ff306e7e-3c13-43b6-b0dc-f386f2732e68",
+          "uuid": "7888fd69-9d23-45ad-a84b-3bf69297de12",
           "title": "Current user",
           "fullFile": "D:\\VSProjects\\autoTest\\QA-Automation\\tests\\loginUser\\02_GetCurrentUser.test.js",
           "file": "\\tests\\loginUser\\02_GetCurrentUser.test.js",
@@ -115,7 +115,7 @@
               "title": "1.3 → Must be logged user with OWN JWT",
               "fullTitle": "Current user 1.3 → Must be logged user with OWN JWT",
               "timedOut": false,
-              "duration": 205,
+              "duration": 242,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -128,8 +128,8 @@
                 "estack": "AssertionError: expected 401 to equal 200\n    at Context.<anonymous> (file:///D:/VSProjects/autoTest/QA-Automation/tests/loginUser/02_GetCurrentUser.test.js:16:25)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
                 "diff": "- 401\n+ 200\n"
               },
-              "uuid": "536fa276-03eb-403f-8c30-c9adf6ca568a",
-              "parentUUID": "ff306e7e-3c13-43b6-b0dc-f386f2732e68",
+              "uuid": "af22e4ab-0973-4ef0-840d-8e038b0eedb4",
+              "parentUUID": "7888fd69-9d23-45ad-a84b-3bf69297de12",
               "isHook": false,
               "skipped": false
             }
@@ -137,17 +137,17 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "536fa276-03eb-403f-8c30-c9adf6ca568a"
+            "af22e4ab-0973-4ef0-840d-8e038b0eedb4"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 205,
+          "duration": 242,
           "root": false,
           "rootEmpty": false,
           "_timeout": 10000
         },
         {
-          "uuid": "a5e35b8d-1d21-4925-b179-ba99a7e3ebac",
+          "uuid": "c1101a2d-97cb-4413-8360-98dbc1b6ddf4",
           "title": "Delete user",
           "fullFile": "D:\\VSProjects\\autoTest\\QA-Automation\\tests\\loginUser\\03_deleteUser.test.js",
           "file": "\\tests\\loginUser\\03_deleteUser.test.js",
@@ -158,7 +158,7 @@
               "title": "1.4 → Delete user by id",
               "fullTitle": "Delete user 1.4 → Delete user by id",
               "timedOut": false,
-              "duration": 245,
+              "duration": 233,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -171,8 +171,8 @@
                 "estack": "AssertionError: expected 404 to equal 200\n    at Context.<anonymous> (file:///D:/VSProjects/autoTest/QA-Automation/tests/loginUser/03_deleteUser.test.js:25:25)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
                 "diff": "- 404\n+ 200\n"
               },
-              "uuid": "6e2f9dd9-9369-4944-bc02-f192204d8b00",
-              "parentUUID": "a5e35b8d-1d21-4925-b179-ba99a7e3ebac",
+              "uuid": "157e84d8-86d7-4d5e-9de9-db3044697619",
+              "parentUUID": "c1101a2d-97cb-4413-8360-98dbc1b6ddf4",
               "isHook": false,
               "skipped": false
             }
@@ -180,17 +180,17 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "6e2f9dd9-9369-4944-bc02-f192204d8b00"
+            "157e84d8-86d7-4d5e-9de9-db3044697619"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 245,
+          "duration": 233,
           "root": false,
           "rootEmpty": false,
           "_timeout": 10000
         },
         {
-          "uuid": "ab3a2fae-089f-451a-a13e-c89caaf425a2",
+          "uuid": "10bf0b4f-9a37-48fc-80dd-fd5521772ce5",
           "title": "Post /pet/add - Add a new pet to the store",
           "fullFile": "D:\\VSProjects\\autoTest\\QA-Automation\\tests\\petsSwagger\\postPet.test.js",
           "file": "\\tests\\petsSwagger\\postPet.test.js",
@@ -201,7 +201,7 @@
               "title": "should add a new pet and return status 200",
               "fullTitle": "Post /pet/add - Add a new pet to the store should add a new pet and return status 200",
               "timedOut": false,
-              "duration": 1219,
+              "duration": 656,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -210,26 +210,26 @@
               "context": null,
               "code": "const responseAddPet = await fetch(\"https://petstore.swagger.io/v2/pet\", {\n    method: \"POST\",\n    headers: {\n        \"Content-Type\": \"application/json\"\n    },\n    body: JSON.stringify(newPet)\n});\nexpect(responseAddPet.status).to.equal(200);",
               "err": {},
-              "uuid": "5ee9c016-944b-4579-a8f7-eb737b977d8f",
-              "parentUUID": "ab3a2fae-089f-451a-a13e-c89caaf425a2",
+              "uuid": "cbcd961b-98e9-42c3-bba8-95e7b47305a2",
+              "parentUUID": "10bf0b4f-9a37-48fc-80dd-fd5521772ce5",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "5ee9c016-944b-4579-a8f7-eb737b977d8f"
+            "cbcd961b-98e9-42c3-bba8-95e7b47305a2"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 1219,
+          "duration": 656,
           "root": false,
           "rootEmpty": false,
           "_timeout": 10000
         },
         {
-          "uuid": "ec5f9f20-74e5-45f9-a2e9-8dc2be216c90",
+          "uuid": "d571ec5a-e247-476c-b842-c277390f562a",
           "title": "Product",
           "fullFile": "D:\\VSProjects\\autoTest\\QA-Automation\\tests\\products\\01_getOneProduct.test.js",
           "file": "\\tests\\products\\01_getOneProduct.test.js",
@@ -240,7 +240,7 @@
               "title": "1.1 → Get product by ID (status 200)",
               "fullTitle": "Product 1.1 → Get product by ID (status 200)",
               "timedOut": false,
-              "duration": 96,
+              "duration": 95,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -249,8 +249,8 @@
               "context": null,
               "code": "resProduct = await requestProducts\n\t.get('/1')\n\t.set('Accept', 'application/json');\nconsole.log('Status:', resProduct.status);\nexpect(resProduct.status).to.equal(200);",
               "err": {},
-              "uuid": "69773cfd-f458-45bd-b662-5cd87011c157",
-              "parentUUID": "ec5f9f20-74e5-45f9-a2e9-8dc2be216c90",
+              "uuid": "5313760a-6c7a-4c65-b5d3-527aa0dfcb9d",
+              "parentUUID": "d571ec5a-e247-476c-b842-c277390f562a",
               "isHook": false,
               "skipped": false
             },
@@ -258,7 +258,7 @@
               "title": "1.2 → Response should be an object",
               "fullTitle": "Product 1.2 → Response should be an object",
               "timedOut": false,
-              "duration": 0,
+              "duration": 1,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -267,8 +267,8 @@
               "context": null,
               "code": "expect(resProduct.body).to.be.an('object');\nconsole.log('Body type:', typeof resProduct.body);",
               "err": {},
-              "uuid": "ec2da57c-fd6a-4621-adeb-8cf73538cc32",
-              "parentUUID": "ec5f9f20-74e5-45f9-a2e9-8dc2be216c90",
+              "uuid": "c47fc270-e639-4c8e-be08-2cde11dd9c0c",
+              "parentUUID": "d571ec5a-e247-476c-b842-c277390f562a",
               "isHook": false,
               "skipped": false
             },
@@ -285,8 +285,8 @@
               "context": null,
               "code": "expect(resProduct.body).to.have.property('id', 1);",
               "err": {},
-              "uuid": "b6c7515d-21b7-4ae5-8668-e50de9893652",
-              "parentUUID": "ec5f9f20-74e5-45f9-a2e9-8dc2be216c90",
+              "uuid": "8468a126-31ae-4116-9063-0264ba939f81",
+              "parentUUID": "d571ec5a-e247-476c-b842-c277390f562a",
               "isHook": false,
               "skipped": false
             },
@@ -303,18 +303,18 @@
               "context": null,
               "code": "expect(resProduct.body).to.have.property('id').that.is.a('number');\nexpect(resProduct.body).to.have.property('title').that.is.a('string');\nexpect(resProduct.body).to.have.property('price').that.is.a('number');",
               "err": {},
-              "uuid": "dbef308b-492c-4b26-833b-5a2f0fc7e66f",
-              "parentUUID": "ec5f9f20-74e5-45f9-a2e9-8dc2be216c90",
+              "uuid": "8894b206-5b18-4b83-9e92-1f55fff9cf9b",
+              "parentUUID": "d571ec5a-e247-476c-b842-c277390f562a",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "69773cfd-f458-45bd-b662-5cd87011c157",
-            "ec2da57c-fd6a-4621-adeb-8cf73538cc32",
-            "b6c7515d-21b7-4ae5-8668-e50de9893652",
-            "dbef308b-492c-4b26-833b-5a2f0fc7e66f"
+            "5313760a-6c7a-4c65-b5d3-527aa0dfcb9d",
+            "c47fc270-e639-4c8e-be08-2cde11dd9c0c",
+            "8468a126-31ae-4116-9063-0264ba939f81",
+            "8894b206-5b18-4b83-9e92-1f55fff9cf9b"
           ],
           "failures": [],
           "pending": [],
@@ -325,7 +325,7 @@
           "_timeout": 10000
         },
         {
-          "uuid": "a4982e4f-625e-4dee-bdea-91f5eba3199a",
+          "uuid": "68197095-1b50-4332-94db-1ca39674fdd5",
           "title": "Product Search",
           "fullFile": "D:\\VSProjects\\autoTest\\QA-Automation\\tests\\products\\02_searchProduct.test.js",
           "file": "\\tests\\products\\02_searchProduct.test.js",
@@ -336,7 +336,7 @@
               "title": "1.1 → Search products by keyword (status 200)",
               "fullTitle": "Product Search 1.1 → Search products by keyword (status 200)",
               "timedOut": false,
-              "duration": 211,
+              "duration": 256,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -345,8 +345,8 @@
               "context": null,
               "code": "resSearch = await requestProducts\n\t.get('/search?q=phone')\n\t.set('Accept', 'application/json');\nconsole.log('Status:', resSearch.status);\nconsole.log(\n\t'body:',\n\tresSearch.body.products.map(p => p.title)\n);\nexpect(resSearch.status).to.equal(200);",
               "err": {},
-              "uuid": "0eefc197-20e2-4296-8cdd-876dabd5c3a2",
-              "parentUUID": "a4982e4f-625e-4dee-bdea-91f5eba3199a",
+              "uuid": "2352aa28-c735-48f8-9b4c-e5204581f788",
+              "parentUUID": "68197095-1b50-4332-94db-1ca39674fdd5",
               "isHook": false,
               "skipped": false
             },
@@ -363,8 +363,8 @@
               "context": null,
               "code": "expect(resSearch.body).to.have.property('products').that.is.an('array');\nconsole.log('Products found:', resSearch.body.products.length);",
               "err": {},
-              "uuid": "107eea8b-5719-4198-bd32-63c667757588",
-              "parentUUID": "a4982e4f-625e-4dee-bdea-91f5eba3199a",
+              "uuid": "5afd4ba6-7f69-458b-9496-e04e178bb74a",
+              "parentUUID": "68197095-1b50-4332-94db-1ca39674fdd5",
               "isHook": false,
               "skipped": false
             },
@@ -372,7 +372,7 @@
               "title": "1.3 → Each product title should contain more then 3 length",
               "fullTitle": "Product Search 1.3 → Each product title should contain more then 3 length",
               "timedOut": false,
-              "duration": 1,
+              "duration": 2,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -381,8 +381,8 @@
               "context": null,
               "code": "//const keyword = 'phone';\nresSearch.body.products.forEach(product => {\n\texpect(product).to.have.property('title');\n\texpect(product.title).to.be.a('string');\n\texpect(product.title.length).to.be.above(3);\n});",
               "err": {},
-              "uuid": "6b372d56-e783-4da4-b01f-5c5154c3cdbd",
-              "parentUUID": "a4982e4f-625e-4dee-bdea-91f5eba3199a",
+              "uuid": "8e3244e5-197e-4fce-911f-05a56a951c50",
+              "parentUUID": "68197095-1b50-4332-94db-1ca39674fdd5",
               "isHook": false,
               "skipped": false
             },
@@ -399,29 +399,29 @@
               "context": null,
               "code": "expect(resSearch.body.products[3].title).to.equal(\n\t'Beats Flex Wireless Earphones'\n);",
               "err": {},
-              "uuid": "95d7173b-de01-4449-b678-21c3d5f7a1c0",
-              "parentUUID": "a4982e4f-625e-4dee-bdea-91f5eba3199a",
+              "uuid": "a969b396-d952-41aa-af57-7d09fddd2ce6",
+              "parentUUID": "68197095-1b50-4332-94db-1ca39674fdd5",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "0eefc197-20e2-4296-8cdd-876dabd5c3a2",
-            "107eea8b-5719-4198-bd32-63c667757588",
-            "6b372d56-e783-4da4-b01f-5c5154c3cdbd",
-            "95d7173b-de01-4449-b678-21c3d5f7a1c0"
+            "2352aa28-c735-48f8-9b4c-e5204581f788",
+            "5afd4ba6-7f69-458b-9496-e04e178bb74a",
+            "8e3244e5-197e-4fce-911f-05a56a951c50",
+            "a969b396-d952-41aa-af57-7d09fddd2ce6"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 213,
+          "duration": 259,
           "root": false,
           "rootEmpty": false,
           "_timeout": 10000
         },
         {
-          "uuid": "c0070055-ecaf-44fa-b018-01ad3a9b4dc0",
+          "uuid": "47956567-ee67-45ec-a6fe-865ba77d24a6",
           "title": "Sort products",
           "fullFile": "D:\\VSProjects\\autoTest\\QA-Automation\\tests\\products\\04_sortProducts.test.js",
           "file": "\\tests\\products\\04_sortProducts.test.js",
@@ -432,7 +432,7 @@
               "title": "1.1 → Get products sorted by price ascending (status 200)",
               "fullTitle": "Sort products 1.1 → Get products sorted by price ascending (status 200)",
               "timedOut": false,
-              "duration": 239,
+              "duration": 253,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -441,26 +441,26 @@
               "context": null,
               "code": "resAsc = await requestProducts\n\t.get('?sortBy=price&order=asc') // сортируем по price\n\t.set('Accept', 'application/json');\nconsole.log('Status:', resAsc.status);\nconsole.log('→ Products sorted ASC by price:');\nresAsc.body.products.forEach((p, index) => {\n\tconsole.log(`${index + 1}. ${p.title} — ${p.price}`);\n});",
               "err": {},
-              "uuid": "9cced48d-5656-4005-96eb-63fa3ace7aae",
-              "parentUUID": "c0070055-ecaf-44fa-b018-01ad3a9b4dc0",
+              "uuid": "e5217bed-1577-4e91-8bbd-da624e82e36a",
+              "parentUUID": "47956567-ee67-45ec-a6fe-865ba77d24a6",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "9cced48d-5656-4005-96eb-63fa3ace7aae"
+            "e5217bed-1577-4e91-8bbd-da624e82e36a"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 239,
+          "duration": 253,
           "root": false,
           "rootEmpty": false,
           "_timeout": 10000
         },
         {
-          "uuid": "a0c96a40-80b3-4cd4-8c86-3c7b5c774343",
+          "uuid": "389532c9-87bc-4688-90d7-c1789e862ab6",
           "title": "5 Get all products categories",
           "fullFile": "D:\\VSProjects\\autoTest\\QA-Automation\\tests\\products\\05_GetAllProductsСategories.test.js",
           "file": "\\tests\\products\\05_GetAllProductsСategories.test.js",
@@ -471,7 +471,7 @@
               "title": "5.1 should return all product categories with status 200",
               "fullTitle": "5 Get all products categories 5.1 should return all product categories with status 200",
               "timedOut": false,
-              "duration": 244,
+              "duration": 241,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -480,8 +480,8 @@
               "context": null,
               "code": "const response = await requestProducts.get('/categories');\nconsole.log(response.body);\nexpect(response.status).to.equal(200);",
               "err": {},
-              "uuid": "20564ba0-8023-4205-8787-56e33f003944",
-              "parentUUID": "a0c96a40-80b3-4cd4-8c86-3c7b5c774343",
+              "uuid": "5f88fc47-2cb1-4ff8-b0c2-5b6b3d0645e3",
+              "parentUUID": "389532c9-87bc-4688-90d7-c1789e862ab6",
               "isHook": false,
               "skipped": false
             },
@@ -489,7 +489,7 @@
               "title": "5.2 result should be an array with length greater than 0",
               "fullTitle": "5 Get all products categories 5.2 result should be an array with length greater than 0",
               "timedOut": false,
-              "duration": 240,
+              "duration": 210,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -498,8 +498,8 @@
               "context": null,
               "code": "const res = await requestProducts.get('/categories');\nexpect(res.body).to.be.an('array').that.is.not.empty;",
               "err": {},
-              "uuid": "9c5fc160-097a-4ebe-a4ec-0320fbb54a82",
-              "parentUUID": "a0c96a40-80b3-4cd4-8c86-3c7b5c774343",
+              "uuid": "73d4a735-4990-4628-83be-1e99ad9f83c2",
+              "parentUUID": "389532c9-87bc-4688-90d7-c1789e862ab6",
               "isHook": false,
               "skipped": false
             },
@@ -507,7 +507,7 @@
               "title": "5.3 Array must include object with properly structure",
               "fullTitle": "5 Get all products categories 5.3 Array must include object with properly structure",
               "timedOut": false,
-              "duration": 242,
+              "duration": 253,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -516,28 +516,28 @@
               "context": null,
               "code": "const res = await requestProducts.get('/categories');\nexpect(res.status).to.equal(200);\nexpect(Array.isArray(res.body)).to.be.true;\nres.body.forEach(item => {\n\tconsole.log(item);\n\texpect(item).to.be.an('object');\n\texpect(item).to.have.property('slug').that.is.a('string');\n\texpect(item).to.have.property('name').that.is.a('string');\n\texpect(item).to.have.property('url').that.is.a('string');\n});",
               "err": {},
-              "uuid": "4e54e5c1-d31e-42e1-8c42-00f16359e53c",
-              "parentUUID": "a0c96a40-80b3-4cd4-8c86-3c7b5c774343",
+              "uuid": "759e77a0-7ac7-4c35-9ffe-48e5ac97c9fc",
+              "parentUUID": "389532c9-87bc-4688-90d7-c1789e862ab6",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "20564ba0-8023-4205-8787-56e33f003944",
-            "9c5fc160-097a-4ebe-a4ec-0320fbb54a82",
-            "4e54e5c1-d31e-42e1-8c42-00f16359e53c"
+            "5f88fc47-2cb1-4ff8-b0c2-5b6b3d0645e3",
+            "73d4a735-4990-4628-83be-1e99ad9f83c2",
+            "759e77a0-7ac7-4c35-9ffe-48e5ac97c9fc"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 726,
+          "duration": 704,
           "root": false,
           "rootEmpty": false,
           "_timeout": 10000
         },
         {
-          "uuid": "a94b369e-fbff-464b-9078-225f7ba0cd73",
+          "uuid": "e6021d65-e397-4f0d-9a38-5390a6933f38",
           "title": "6 Get products by category",
           "fullFile": "D:\\VSProjects\\autoTest\\QA-Automation\\tests\\products\\06_GetProductsCategoryList.test.js",
           "file": "\\tests\\products\\06_GetProductsCategoryList.test.js",
@@ -548,21 +548,21 @@
               "title": "6.1 should return list of categories with status 200",
               "fullTitle": "6 Get products by category 6.1 should return list of categories with status 200",
               "timedOut": false,
-              "duration": 505,
+              "duration": 1,
               "state": "failed",
               "speed": null,
               "pass": false,
               "fail": true,
               "pending": false,
               "context": null,
-              "code": "const response = await fetch(\"https://dummyjson.com/products/category-list\");\n       expect(response.status).tо.equal(200);\n const data = await response.json();",
+              "code": "// const response = await requestProducts.get('/categories'); it should be like this\nconst response = await requestProducts(\n\t'https://dummyjson.com/products/category-list'\n);\nexpect(response.status).tо.equal(200);\nconst data = await response.json(); // two variables with the same name",
               "err": {
-                "message": "Error: Invalid Chai property: tо. Did you mean \"to\"?",
-                "estack": "Error: Invalid Chai property: tо. Did you mean \"to\"?\n    at Object.proxyGetter [as get] (file:///D:/VSProjects/autoTest/QA-Automation/node_modules/chai/index.js:1650:17)\n    at Context.<anonymous> (file:///D:/VSProjects/autoTest/QA-Automation/tests/products/06_GetProductsCategoryList.test.js:9:31)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
+                "message": "TypeError: requestProducts is not a function",
+                "estack": "TypeError: requestProducts is not a function\n    at Context.<anonymous> (file:///D:/VSProjects/autoTest/QA-Automation/tests/products/06_GetProductsCategoryList.test.js:9:26)\n    at process.processImmediate (node:internal/timers:483:21)",
                 "diff": null
               },
-              "uuid": "24e62561-2a3c-4a25-9d75-e55700a03899",
-              "parentUUID": "a94b369e-fbff-464b-9078-225f7ba0cd73",
+              "uuid": "ae35a7ed-cc8d-48a6-8eb4-134f3d681362",
+              "parentUUID": "e6021d65-e397-4f0d-9a38-5390a6933f38",
               "isHook": false,
               "skipped": false
             },
@@ -570,7 +570,7 @@
               "title": "6.2 should return categories as an array with length greater than 0",
               "fullTitle": "6 Get products by category 6.2 should return categories as an array with length greater than 0",
               "timedOut": false,
-              "duration": 0,
+              "duration": 1,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -580,11 +580,11 @@
               "code": "expect(data).to.be.an('array');\nexpect(data.length).to.be.greaterThan(0);",
               "err": {
                 "message": "AssertionError: expected undefined to be an array",
-                "estack": "AssertionError: expected undefined to be an array\n    at Context.<anonymous> (file:///D:/VSProjects/autoTest/QA-Automation/tests/products/06_GetProductsCategoryList.test.js:13:28)\n    at process.processImmediate (node:internal/timers:483:21)",
+                "estack": "AssertionError: expected undefined to be an array\n    at Context.<anonymous> (file:///D:/VSProjects/autoTest/QA-Automation/tests/products/06_GetProductsCategoryList.test.js:16:22)\n    at process.processImmediate (node:internal/timers:483:21)",
                 "diff": null
               },
-              "uuid": "58a2849b-4951-4f8d-a038-e68c56756ec1",
-              "parentUUID": "a94b369e-fbff-464b-9078-225f7ba0cd73",
+              "uuid": "21028bcc-58f5-416d-8b15-94da1f894508",
+              "parentUUID": "e6021d65-e397-4f0d-9a38-5390a6933f38",
               "isHook": false,
               "skipped": false
             },
@@ -599,14 +599,14 @@
               "fail": true,
               "pending": false,
               "context": null,
-              "code": "data.forEach(category => {\n    expect(typeof category).to.be.a('string');\n});",
+              "code": "data.forEach(category => {\n\texpect(typeof category).to.be.a('string');\n});",
               "err": {
                 "message": "TypeError: Cannot read properties of undefined (reading 'forEach')",
-                "estack": "TypeError: Cannot read properties of undefined (reading 'forEach')\n    at Context.<anonymous> (file:///D:/VSProjects/autoTest/QA-Automation/tests/products/06_GetProductsCategoryList.test.js:17:14)\n    at process.processImmediate (node:internal/timers:483:21)",
+                "estack": "TypeError: Cannot read properties of undefined (reading 'forEach')\n    at Context.<anonymous> (file:///D:/VSProjects/autoTest/QA-Automation/tests/products/06_GetProductsCategoryList.test.js:20:8)\n    at process.processImmediate (node:internal/timers:483:21)",
                 "diff": null
               },
-              "uuid": "6a421b08-a7e1-4887-81ac-7c0cfe5df500",
-              "parentUUID": "a94b369e-fbff-464b-9078-225f7ba0cd73",
+              "uuid": "ae23e9b2-7f5e-4165-a0ca-1dad5a544808",
+              "parentUUID": "e6021d65-e397-4f0d-9a38-5390a6933f38",
               "isHook": false,
               "skipped": false
             }
@@ -614,19 +614,19 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "24e62561-2a3c-4a25-9d75-e55700a03899",
-            "58a2849b-4951-4f8d-a038-e68c56756ec1",
-            "6a421b08-a7e1-4887-81ac-7c0cfe5df500"
+            "ae35a7ed-cc8d-48a6-8eb4-134f3d681362",
+            "21028bcc-58f5-416d-8b15-94da1f894508",
+            "ae23e9b2-7f5e-4165-a0ca-1dad5a544808"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 505,
+          "duration": 2,
           "root": false,
           "rootEmpty": false,
           "_timeout": 10000
         },
         {
-          "uuid": "0abd371c-0b3a-4b83-b87a-43d53ca918a4",
+          "uuid": "757ebc7b-5cfa-4e6e-9ad2-d9d4e51b17e5",
           "title": "Users API - Create User",
           "fullFile": "D:\\VSProjects\\autoTest\\QA-Automation\\tests\\users\\01_createUser.test.js",
           "file": "\\tests\\users\\01_createUser.test.js",
@@ -635,7 +635,7 @@
               "title": "\"before all\" hook in \"Users API - Create User\"",
               "fullTitle": "Users API - Create User \"before all\" hook in \"Users API - Create User\"",
               "timedOut": false,
-              "duration": 230,
+              "duration": 233,
               "state": null,
               "speed": null,
               "pass": false,
@@ -644,8 +644,8 @@
               "context": null,
               "code": "newUser = generateUser();\nres = await requestUsers\n\t.post('/add')\n\t.set('Accept', 'application/json')\n\t.send(newUser);",
               "err": {},
-              "uuid": "1718894d-fc04-40fa-b9f3-2846eedbd7c6",
-              "parentUUID": "0abd371c-0b3a-4b83-b87a-43d53ca918a4",
+              "uuid": "db35584b-e095-4fc9-8ed4-5dfce040da70",
+              "parentUUID": "757ebc7b-5cfa-4e6e-9ad2-d9d4e51b17e5",
               "isHook": true,
               "skipped": false
             }
@@ -656,7 +656,7 @@
               "title": "1.0 → Object should not be empty",
               "fullTitle": "Users API - Create User 1.0 → Object should not be empty",
               "timedOut": false,
-              "duration": 0,
+              "duration": 1,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -665,8 +665,8 @@
               "context": null,
               "code": "expect(res.body).to.not.be.empty;",
               "err": {},
-              "uuid": "4082b8bc-719f-4a83-8900-92bd4289003f",
-              "parentUUID": "0abd371c-0b3a-4b83-b87a-43d53ca918a4",
+              "uuid": "45170f80-7c51-41c2-991b-bb8982f645ad",
+              "parentUUID": "757ebc7b-5cfa-4e6e-9ad2-d9d4e51b17e5",
               "isHook": false,
               "skipped": false
             },
@@ -683,8 +683,8 @@
               "context": null,
               "code": "expect(res.status).to.equal(201);",
               "err": {},
-              "uuid": "a42c1008-fe64-48ca-8ca7-0f2ae34c0ad7",
-              "parentUUID": "0abd371c-0b3a-4b83-b87a-43d53ca918a4",
+              "uuid": "cb99286a-8a3a-4a23-af4e-80dcff342ebb",
+              "parentUUID": "757ebc7b-5cfa-4e6e-9ad2-d9d4e51b17e5",
               "isHook": false,
               "skipped": false
             },
@@ -701,8 +701,8 @@
               "context": null,
               "code": "expect(res.body).to.be.an('object');",
               "err": {},
-              "uuid": "97a81e1c-633a-4d5b-ad7a-5e6833a05a77",
-              "parentUUID": "0abd371c-0b3a-4b83-b87a-43d53ca918a4",
+              "uuid": "aab58052-e202-464c-a10f-6b8c347610c7",
+              "parentUUID": "757ebc7b-5cfa-4e6e-9ad2-d9d4e51b17e5",
               "isHook": false,
               "skipped": false
             },
@@ -723,8 +723,8 @@
                 "estack": "AssertionError: expected { id: 209, firstName: 'Adam', …(26) } to have property 'address' of 'Taiwan', but got { address: '', city: '', …(5) }\n    at Context.<anonymous> (file:///D:/VSProjects/autoTest/QA-Automation/tests/users/01_createUser.test.js:38:23)\n    at process.processImmediate (node:internal/timers:483:21)",
                 "diff": null
               },
-              "uuid": "6e1f2f11-e3ef-456e-849d-cc30ab4562a3",
-              "parentUUID": "0abd371c-0b3a-4b83-b87a-43d53ca918a4",
+              "uuid": "aefb9db5-4f4d-4963-8105-8626a0fea925",
+              "parentUUID": "757ebc7b-5cfa-4e6e-9ad2-d9d4e51b17e5",
               "isHook": false,
               "skipped": false
             },
@@ -741,8 +741,8 @@
               "context": null,
               "code": "expect(res.body).to.have.property('id');\nexpect(isPositiveNumber(res.body.id)).to.be.true;",
               "err": {},
-              "uuid": "29994eca-c294-45dc-8396-bfd2d2cb18d1",
-              "parentUUID": "0abd371c-0b3a-4b83-b87a-43d53ca918a4",
+              "uuid": "b69ca812-af57-4914-8dd8-9498985eb227",
+              "parentUUID": "757ebc7b-5cfa-4e6e-9ad2-d9d4e51b17e5",
               "isHook": false,
               "skipped": false
             },
@@ -759,8 +759,8 @@
               "context": null,
               "code": "expect(isValidEmail(res.body.email)).to.be.true;\nexpect(isGmail(res.body.email)).to.be.true;",
               "err": {},
-              "uuid": "e4b16846-b934-41ef-8977-141655ede22d",
-              "parentUUID": "0abd371c-0b3a-4b83-b87a-43d53ca918a4",
+              "uuid": "94f7d222-49d8-4391-b277-806e1e9ec51c",
+              "parentUUID": "757ebc7b-5cfa-4e6e-9ad2-d9d4e51b17e5",
               "isHook": false,
               "skipped": false
             },
@@ -781,33 +781,33 @@
                 "estack": "AssertionError: expected false to be true\n    at Context.<anonymous> (file:///D:/VSProjects/autoTest/QA-Automation/tests/users/01_createUser.test.js:54:51)\n    at process.processImmediate (node:internal/timers:483:21)",
                 "diff": "- false\n+ true\n"
               },
-              "uuid": "76158c72-b8dc-48d9-9aea-85edd5f8237d",
-              "parentUUID": "0abd371c-0b3a-4b83-b87a-43d53ca918a4",
+              "uuid": "66158799-7784-4b08-916d-802d3e0e01c2",
+              "parentUUID": "757ebc7b-5cfa-4e6e-9ad2-d9d4e51b17e5",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "4082b8bc-719f-4a83-8900-92bd4289003f",
-            "a42c1008-fe64-48ca-8ca7-0f2ae34c0ad7",
-            "97a81e1c-633a-4d5b-ad7a-5e6833a05a77",
-            "29994eca-c294-45dc-8396-bfd2d2cb18d1",
-            "e4b16846-b934-41ef-8977-141655ede22d"
+            "45170f80-7c51-41c2-991b-bb8982f645ad",
+            "cb99286a-8a3a-4a23-af4e-80dcff342ebb",
+            "aab58052-e202-464c-a10f-6b8c347610c7",
+            "b69ca812-af57-4914-8dd8-9498985eb227",
+            "94f7d222-49d8-4391-b277-806e1e9ec51c"
           ],
           "failures": [
-            "6e1f2f11-e3ef-456e-849d-cc30ab4562a3",
-            "76158c72-b8dc-48d9-9aea-85edd5f8237d"
+            "aefb9db5-4f4d-4963-8105-8626a0fea925",
+            "66158799-7784-4b08-916d-802d3e0e01c2"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 1,
+          "duration": 2,
           "root": false,
           "rootEmpty": false,
           "_timeout": 10000
         },
         {
-          "uuid": "49daae1b-4b15-4617-8752-ec437d505163",
+          "uuid": "67662097-acd8-45b0-b1bd-e97fabd1981b",
           "title": "Users API - Update User",
           "fullFile": "D:\\VSProjects\\autoTest\\QA-Automation\\tests\\users\\03_updateUser.test.js",
           "file": "\\tests\\users\\03_updateUser.test.js",
@@ -816,7 +816,7 @@
               "title": "\"before all\" hook in \"Users API - Update User\"",
               "fullTitle": "Users API - Update User \"before all\" hook in \"Users API - Update User\"",
               "timedOut": false,
-              "duration": 230,
+              "duration": 241,
               "state": null,
               "speed": null,
               "pass": false,
@@ -825,8 +825,8 @@
               "context": null,
               "code": "const newUser = generateUser();\nconst res = await requestUsers\n\t.post('/add')\n\t.set('Accept', 'application/json')\n\t.send(newUser);\nuserId = res.body.id;",
               "err": {},
-              "uuid": "657d6810-e861-424a-85e0-b26d73750a85",
-              "parentUUID": "49daae1b-4b15-4617-8752-ec437d505163",
+              "uuid": "202da421-cdd9-4a70-923c-f69eea047ed8",
+              "parentUUID": "67662097-acd8-45b0-b1bd-e97fabd1981b",
               "isHook": true,
               "skipped": false
             }
@@ -837,7 +837,7 @@
               "title": "3.1 → PUT /users/:id should update name",
               "fullTitle": "Users API - Update User 3.1 → PUT /users/:id should update name",
               "timedOut": false,
-              "duration": 211,
+              "duration": 249,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -850,8 +850,8 @@
                 "estack": "AssertionError: expected 404 to equal 200\n    at Context.<anonymous> (file:///D:/VSProjects/autoTest/QA-Automation/tests/users/03_updateUser.test.js:26:25)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
                 "diff": "- 404\n+ 200\n"
               },
-              "uuid": "ffe4a4ee-3577-409a-bb37-d992a933d3ea",
-              "parentUUID": "49daae1b-4b15-4617-8752-ec437d505163",
+              "uuid": "79c3f491-11c6-41a5-826f-494bc91be479",
+              "parentUUID": "67662097-acd8-45b0-b1bd-e97fabd1981b",
               "isHook": false,
               "skipped": false
             }
@@ -859,17 +859,17 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "ffe4a4ee-3577-409a-bb37-d992a933d3ea"
+            "79c3f491-11c6-41a5-826f-494bc91be479"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 211,
+          "duration": 249,
           "root": false,
           "rootEmpty": false,
           "_timeout": 10000
         },
         {
-          "uuid": "3174200b-210e-4ccb-8ad6-1f106643de65",
+          "uuid": "d6bf6a17-09a1-43da-93f8-8f4cb6030198",
           "title": "Users API - Delete User",
           "fullFile": "D:\\VSProjects\\autoTest\\QA-Automation\\tests\\users\\04_deleteUser.test.js",
           "file": "\\tests\\users\\04_deleteUser.test.js",
@@ -887,8 +887,8 @@
               "context": null,
               "code": "const newUser = generateUser();\nconst res = await requestUsers\n\t.post('/add')\n\t.set('Accept', 'application/json')\n\t.send(newUser);\nuserId = res.body.id;",
               "err": {},
-              "uuid": "6443e081-7e87-42c8-8d4a-344a99a9790a",
-              "parentUUID": "3174200b-210e-4ccb-8ad6-1f106643de65",
+              "uuid": "f57377c8-6135-4ee1-b18d-3101e77dc377",
+              "parentUUID": "d6bf6a17-09a1-43da-93f8-8f4cb6030198",
               "isHook": true,
               "skipped": false
             }
@@ -899,7 +899,7 @@
               "title": "4.1 → DELETE /users/:id should delete user",
               "fullTitle": "Users API - Delete User 4.1 → DELETE /users/:id should delete user",
               "timedOut": false,
-              "duration": 202,
+              "duration": 203,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -912,8 +912,8 @@
                 "estack": "AssertionError: expected 404 to equal 200\n    at Context.<anonymous> (file:///D:/VSProjects/autoTest/QA-Automation/tests/users/04_deleteUser.test.js:23:25)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
                 "diff": "- 404\n+ 200\n"
               },
-              "uuid": "0965dd5e-731d-449c-a5ff-1749d17bc070",
-              "parentUUID": "3174200b-210e-4ccb-8ad6-1f106643de65",
+              "uuid": "cfc2f9c4-c742-4358-bc71-dce5d042bfd6",
+              "parentUUID": "d6bf6a17-09a1-43da-93f8-8f4cb6030198",
               "isHook": false,
               "skipped": false
             },
@@ -921,7 +921,7 @@
               "title": "4.2 → GET /users/:id should return 404 after delete",
               "fullTitle": "Users API - Delete User 4.2 → GET /users/:id should return 404 after delete",
               "timedOut": false,
-              "duration": 202,
+              "duration": 206,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -930,28 +930,28 @@
               "context": null,
               "code": "const res = await requestUsers\n\t.get(`/users/${userId}`)\n\t.set('Accept', 'application/json');\nexpect(res.status).to.equal(404);",
               "err": {},
-              "uuid": "bb6af036-2f49-4645-a854-28c7ffa5373c",
-              "parentUUID": "3174200b-210e-4ccb-8ad6-1f106643de65",
+              "uuid": "4f69fab0-63c1-4040-bfc2-44442f0919dd",
+              "parentUUID": "d6bf6a17-09a1-43da-93f8-8f4cb6030198",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "bb6af036-2f49-4645-a854-28c7ffa5373c"
+            "4f69fab0-63c1-4040-bfc2-44442f0919dd"
           ],
           "failures": [
-            "0965dd5e-731d-449c-a5ff-1749d17bc070"
+            "cfc2f9c4-c742-4358-bc71-dce5d042bfd6"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 404,
+          "duration": 409,
           "root": false,
           "rootEmpty": false,
           "_timeout": 10000
         },
         {
-          "uuid": "1f7edae0-2a95-4cd2-8dcc-87cc2f3840ec",
+          "uuid": "1b887750-bd25-41d4-883d-40619f178da7",
           "title": "Users API - Response Headers",
           "fullFile": "D:\\VSProjects\\autoTest\\QA-Automation\\tests\\users\\05_headers.test.js",
           "file": "\\tests\\users\\05_headers.test.js",
@@ -960,7 +960,7 @@
               "title": "\"before all\" hook in \"Users API - Response Headers\"",
               "fullTitle": "Users API - Response Headers \"before all\" hook in \"Users API - Response Headers\"",
               "timedOut": false,
-              "duration": 259,
+              "duration": 262,
               "state": null,
               "speed": null,
               "pass": false,
@@ -969,8 +969,8 @@
               "context": null,
               "code": "res = await requestUsers\n\t.post('/add')\n\t.set('Accept', 'application/json')\n\t.send(newUser);",
               "err": {},
-              "uuid": "8624c2ec-fdf3-4a46-93b7-b2cec58f7616",
-              "parentUUID": "1f7edae0-2a95-4cd2-8dcc-87cc2f3840ec",
+              "uuid": "be279b5e-ee25-42db-8a60-33bb0c2f528e",
+              "parentUUID": "1b887750-bd25-41d4-883d-40619f178da7",
               "isHook": true,
               "skipped": false
             }
@@ -990,8 +990,8 @@
               "context": null,
               "code": "expect(res.headers['content-type']).to.include('application/json');",
               "err": {},
-              "uuid": "db4d7627-4527-4203-b773-b0f391d05115",
-              "parentUUID": "1f7edae0-2a95-4cd2-8dcc-87cc2f3840ec",
+              "uuid": "23a2938a-bb2c-4776-9673-8f25d69bb58b",
+              "parentUUID": "1b887750-bd25-41d4-883d-40619f178da7",
               "isHook": false,
               "skipped": false
             },
@@ -1008,8 +1008,8 @@
               "context": null,
               "code": "expect(res.headers).to.have.property('server');",
               "err": {},
-              "uuid": "ab83a213-ce12-420c-97ed-187343a2f185",
-              "parentUUID": "1f7edae0-2a95-4cd2-8dcc-87cc2f3840ec",
+              "uuid": "6abf3ddb-8359-4231-8290-c21eb70dd2ae",
+              "parentUUID": "1b887750-bd25-41d4-883d-40619f178da7",
               "isHook": false,
               "skipped": false
             },
@@ -1026,8 +1026,8 @@
               "context": null,
               "code": "expect(Number(res.headers['content-length'])).to.be.greaterThan(0);",
               "err": {},
-              "uuid": "676c803b-32e5-4875-ae54-b8b500041fc8",
-              "parentUUID": "1f7edae0-2a95-4cd2-8dcc-87cc2f3840ec",
+              "uuid": "54560b0c-323a-49b7-8d95-8a49e14ebb5e",
+              "parentUUID": "1b887750-bd25-41d4-883d-40619f178da7",
               "isHook": false,
               "skipped": false
             },
@@ -1035,7 +1035,7 @@
               "title": "5.4 → Date header must exist and be valid",
               "fullTitle": "Users API - Response Headers 5.4 → Date header must exist and be valid",
               "timedOut": false,
-              "duration": 2,
+              "duration": 1,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -1044,8 +1044,8 @@
               "context": null,
               "code": "const date = new Date(res.headers['date']);\nexpect(date.toString()).not.to.equal('Invalid Date');",
               "err": {},
-              "uuid": "131cff3b-bbe5-48da-80a0-b466847dedf7",
-              "parentUUID": "1f7edae0-2a95-4cd2-8dcc-87cc2f3840ec",
+              "uuid": "4ef53fc8-6f4f-4210-9d60-c5e0b0b820d3",
+              "parentUUID": "1b887750-bd25-41d4-883d-40619f178da7",
               "isHook": false,
               "skipped": false
             },
@@ -1062,8 +1062,8 @@
               "context": null,
               "code": "expect(res.headers['access-control-allow-origin']).to.equal('*');",
               "err": {},
-              "uuid": "257dc5c5-9a73-4bca-9d74-550e292eae5c",
-              "parentUUID": "1f7edae0-2a95-4cd2-8dcc-87cc2f3840ec",
+              "uuid": "d30582e8-ad5f-4057-956f-6a90b365d01e",
+              "parentUUID": "1b887750-bd25-41d4-883d-40619f178da7",
               "isHook": false,
               "skipped": false
             },
@@ -1080,31 +1080,31 @@
               "context": null,
               "code": "expect(res.headers).to.have.property('x-frame-options');\nexpect(res.headers).to.have.property('x-content-type-options');\nexpect(res.headers).to.have.property('x-xss-protection');",
               "err": {},
-              "uuid": "856acfb8-741c-444e-8a24-fe1d9875dadd",
-              "parentUUID": "1f7edae0-2a95-4cd2-8dcc-87cc2f3840ec",
+              "uuid": "c2e329d8-d32c-498e-b0bf-033a88c996e5",
+              "parentUUID": "1b887750-bd25-41d4-883d-40619f178da7",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "db4d7627-4527-4203-b773-b0f391d05115",
-            "ab83a213-ce12-420c-97ed-187343a2f185",
-            "676c803b-32e5-4875-ae54-b8b500041fc8",
-            "131cff3b-bbe5-48da-80a0-b466847dedf7",
-            "257dc5c5-9a73-4bca-9d74-550e292eae5c",
-            "856acfb8-741c-444e-8a24-fe1d9875dadd"
+            "23a2938a-bb2c-4776-9673-8f25d69bb58b",
+            "6abf3ddb-8359-4231-8290-c21eb70dd2ae",
+            "54560b0c-323a-49b7-8d95-8a49e14ebb5e",
+            "4ef53fc8-6f4f-4210-9d60-c5e0b0b820d3",
+            "d30582e8-ad5f-4057-956f-6a90b365d01e",
+            "c2e329d8-d32c-498e-b0bf-033a88c996e5"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 2,
+          "duration": 1,
           "root": false,
           "rootEmpty": false,
           "_timeout": 10000
         },
         {
-          "uuid": "2f05a93b-5820-43db-90e5-78002ca8a471",
+          "uuid": "a4c205e4-7fe5-44bc-bb89-06cec10a9f13",
           "title": "Users API - Negative Tests",
           "fullFile": "D:\\VSProjects\\autoTest\\QA-Automation\\tests\\users\\06_negative.test.js",
           "file": "\\tests\\users\\06_negative.test.js",
@@ -1115,7 +1115,7 @@
               "title": "6.1 → Should fail creating user with invalid email",
               "fullTitle": "Users API - Negative Tests 6.1 → Should fail creating user with invalid email",
               "timedOut": false,
-              "duration": 242,
+              "duration": 236,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -1128,8 +1128,8 @@
                 "estack": "AssertionError: expected 201 to be one of [ 400, 422 ]\n    at Context.<anonymous> (file:///D:/VSProjects/autoTest/QA-Automation/tests/users/06_negative.test.js:19:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
                 "diff": null
               },
-              "uuid": "25645e64-d99a-4ad3-8f72-a8ce580504c7",
-              "parentUUID": "2f05a93b-5820-43db-90e5-78002ca8a471",
+              "uuid": "b32a03f7-b7e3-42bb-b1d8-612c0e52aaa6",
+              "parentUUID": "a4c205e4-7fe5-44bc-bb89-06cec10a9f13",
               "isHook": false,
               "skipped": false
             },
@@ -1137,7 +1137,7 @@
               "title": "6.2 → Should fail creating user with negative age",
               "fullTitle": "Users API - Negative Tests 6.2 → Should fail creating user with negative age",
               "timedOut": false,
-              "duration": 244,
+              "duration": 235,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -1150,8 +1150,8 @@
                 "estack": "AssertionError: expected 201 to be one of [ 400, 422 ]\n    at Context.<anonymous> (file:///D:/VSProjects/autoTest/QA-Automation/tests/users/06_negative.test.js:35:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
                 "diff": null
               },
-              "uuid": "994a5193-220f-4719-bac2-075232ebcd49",
-              "parentUUID": "2f05a93b-5820-43db-90e5-78002ca8a471",
+              "uuid": "01a731e4-cdfe-4ac7-85bc-d534b00f52c5",
+              "parentUUID": "a4c205e4-7fe5-44bc-bb89-06cec10a9f13",
               "isHook": false,
               "skipped": false
             },
@@ -1159,7 +1159,7 @@
               "title": "6.3 → Should fail creating user with empty fields",
               "fullTitle": "Users API - Negative Tests 6.3 → Should fail creating user with empty fields",
               "timedOut": false,
-              "duration": 195,
+              "duration": 204,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -1172,8 +1172,8 @@
                 "estack": "AssertionError: expected 201 to be one of [ 400, 422 ]\n    at Context.<anonymous> (file:///D:/VSProjects/autoTest/QA-Automation/tests/users/06_negative.test.js:44:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
                 "diff": null
               },
-              "uuid": "d2bcfddc-68ef-4251-b167-2f67238e1a62",
-              "parentUUID": "2f05a93b-5820-43db-90e5-78002ca8a471",
+              "uuid": "83c0d0c8-60b8-41bb-985d-52069a9db8cd",
+              "parentUUID": "a4c205e4-7fe5-44bc-bb89-06cec10a9f13",
               "isHook": false,
               "skipped": false
             }
@@ -1181,13 +1181,13 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "25645e64-d99a-4ad3-8f72-a8ce580504c7",
-            "994a5193-220f-4719-bac2-075232ebcd49",
-            "d2bcfddc-68ef-4251-b167-2f67238e1a62"
+            "b32a03f7-b7e3-42bb-b1d8-612c0e52aaa6",
+            "01a731e4-cdfe-4ac7-85bc-d534b00f52c5",
+            "83c0d0c8-60b8-41bb-985d-52069a9db8cd"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 681,
+          "duration": 675,
           "root": false,
           "rootEmpty": false,
           "_timeout": 10000
