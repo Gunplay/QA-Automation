@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import { requestUsers } from '../config/api';
+import { requestUsers } from '../config/api.js';
 
 // const request = supertest('https://dummyjson.com');
 

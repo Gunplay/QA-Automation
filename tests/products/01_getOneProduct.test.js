@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import { requestProducts } from '../config/api';
+import { requestProducts } from '../config/api.js';
 describe('Product', function () {
 	let resProduct;
 
